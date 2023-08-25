@@ -223,7 +223,7 @@ signals:
 private:
     Ui::MainWindow *ui;
 
-    // ToolWindow *toolWindow;
+    ToolWindow *toolWindow;
 
     form01_mainSettings *form01_mainSettings01; // объект класса form01_mainSettings, обязательно динамический
     cl_LOG *obj_LOG_01;                        // объект класса LOG, обязательно динамический

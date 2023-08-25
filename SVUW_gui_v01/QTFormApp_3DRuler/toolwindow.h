@@ -29,8 +29,10 @@ class ToolWindow : public QDialog
     Q_OBJECT
 
 public:
-    explicit ToolWindow(cv::Mat image, ADS::t_vuxyzrgb data, QWidget *parent = nullptr);
+    explicit ToolWindow(QWidget *parent = nullptr);
     ~ToolWindow();
+
+    void setData(cv::Mat image, ADS::t_vuxyzrgb data);
 
     enum ToolMode {Mode2D, Mode3D};
     void setMode(ToolMode mode);

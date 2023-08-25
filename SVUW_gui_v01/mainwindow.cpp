@@ -646,13 +646,12 @@ MainWindow::MainWindow(QWidget *parent)
     emit signal_sendText_plainTextEdit_StateInfo( " Start Program "); // отправка текста в информационное окно
   // >>>>>>>>>>>>>>>>>>>>>>
 
-
-
-
+    toolWindow = new ToolWindow(this);
 }
 
 MainWindow::~MainWindow()
 {
+    delete toolWindow;
     // остановка потоков
     fill(exitCode_global.begin(), exitCode_global.end(), false);
 
@@ -6258,33 +6257,7 @@ void MainWindow::on_pushButton_DarkNet_clicked()
 
 void MainWindow::on_pushButton_Start3DRuler_clicked()
 {
-//    // Get current Image from camera
-//    //cv::Mat image_original;
-//    //webcam.read(image_original);
-//    cv::Mat image;
-//    webcam.read(image);
-//    // VA 31-07-2023: Это временный костыль.
-//    // Размер изображения на панели инструментов (и сама панель)
-//    // должны изменять свой размер автоматически
-//    //cv::resize(image_original,
-//    //           image,
-//    //           cv::Size(640, 480),
-//    //           0,
-//    //           0,
-//    //           cv::INTER_LINEAR);
-
-//    // Массив данных описывающий облоко 3D точек
-//    ADS::t_vuxyzrgb data = getData(image.rows, image.cols);
-
-//    // Show tool window
-//    ToolWindow *toolWindow = new ToolWindow(image, data, this);
-//    // toolWindow->layout()->setSizeConstraint(QLayout::SetFixedSize);
-//    toolWindow->exec();
-//    delete toolWindow;
-
-
-
-   ADS::cl_DenseStereo * obj_ptrf = obj_ptr;
+    ADS::cl_DenseStereo * obj_ptrf = obj_ptr;
    str_Settings *settings_ptrf = settings_ptr;  // указатель на структуру настроек
 
    ADS::cl_DenseStereo * obj_ptrf_temp = new  ADS::cl_DenseStereo; // копия на объекта класса
@@ -6308,15 +6281,11 @@ void MainWindow::on_pushButton_Start3DRuler_clicked()
     obj_ptrf_temp->setResultImage ( obj_ptrf->getResultImage()  );
 
 
-    // Show tool window
-    ToolWindow *toolWindow = new ToolWindow(obj_ptrf_temp->getImgOpenCV_1left(), obj_ptrf_temp->get_vuxyzrgb(), this);
-    // toolWindow->layout()->setSizeConstraint(QLayout::SetFixedSize);
-    toolWindow->exec();
+    // Show tool window    
+    toolWindow->setData(obj_ptrf_temp->getImgRemap_StereoPair().at(1), obj_ptrf_temp->get_vuxyzrgb());
 
     // открываем окно
-    // toolWindow->show();
-    // toolWindow->activateWindow();
-    // delete toolWindow;
-
+    toolWindow->show();
+    toolWindow->activateWindow();
 }
 
