@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>QTFormApp/img/icon-cube.png</file>
+        <file>QTFormApp/img/icon-ruler.png</file>
+    </qresource>
+</RCC>

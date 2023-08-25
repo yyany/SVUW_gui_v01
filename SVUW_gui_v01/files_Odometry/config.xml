@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<opencv_storage>
+    <intrinsicsPath>../config/Calibration/(62a)_(720p)_StereoModule(F1.2_D2)_WATER-Err2.xml</intrinsicsPath>
+    <extrinsicsPath>../config/Calibration/(62a)_(720p)_StereoModule(F1.2_D2)_WATER-Err2.xml</extrinsicsPath>
+    <leftVideo>../videos/SV_01_left1004.mp4</leftVideo>
+    <rightVideo>../videos/SV_02_right1004.mp4</rightVideo>
+    <minRange>0.0</minRange>
+    <maxRange>5000.0</maxRange>
+    <clusteringCoefficient>0.1</clusteringCoefficient>
+    <clusterMinimumNumberOfPoints>1</clusterMinimumNumberOfPoints>
+    <imageStart>0</imageStart>
+    <imageStep>2</imageStep>
+    <imageEnd>90000</imageEnd>
+    <minimumPointsForPnP>6</minimumPointsForPnP>
+    <imageScaleFactor>0.375</imageScaleFactor>
+    <maxCoordinatDuration>200.0</maxCoordinatDuration>
+    <saveTrajectory>1</saveTrajectory>
+    <cycleLength>20</cycleLength>
+</opencv_storage>

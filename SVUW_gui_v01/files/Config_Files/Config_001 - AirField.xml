@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<opencv_storage>
+<CoefShowWindow>1.0</CoefShowWindow>
+<amountFrames>1200000</amountFrames>
+<amountcaptureFrames>1</amountcaptureFrames>
+<limit_points>1000</limit_points>
+<filter_ClusterPoints>20</filter_ClusterPoints>
+<limit_WorkingArea>
+  -400. -300. 350. 0. 180. 5100.</limit_WorkingArea>
+<rad>400.</rad>
+<neighbors>0.</neighbors>
+<coef_base_dbs>0.007325</coef_base_dbs>
+<coef_pow_dbs>0.99</coef_pow_dbs>
+<Calibration_filename>./files/(61a)_(960p)_StereoModule(F1.2_D2)_AIR.xml</Calibration_filename>
+<setCalibrationImg_folderName>(41a)_MODUL(F1.2_D2)_WATER</setCalibrationImg_folderName>
+<setCalibration_fileName>"./files/StereoCamParams_New.xml"</setCalibration_fileName>
+<setPath_fileList>"./files/Im_list_all_New.txt"</setPath_fileList>
+<usedPath_fileList>"./files/Im_list_all_New.txt"</usedPath_fileList>
+<board_w>9</board_w>
+<board_h>6</board_h>
+<squareSize>2.0100000381469727e+01</squareSize>
+<smbNumDisparities>240</smbNumDisparities>
+<smbBlockSize>9</smbBlockSize>
+<smbPreFilterCap>17</smbPreFilterCap>
+<smbMinDisparity>0</smbMinDisparity>
+<smbTextureThreshold>0</smbTextureThreshold>
+<smbUniquenessRatio>27</smbUniquenessRatio>
+<smbSpeckleWindowSize>68</smbSpeckleWindowSize>
+<smbSpeckleRange>21</smbSpeckleRange>
+<smbDisp12MaxDiff>21</smbDisp12MaxDiff>
+<startThread>1000</startThread>
+<timeStep_Thread>30</timeStep_Thread>
+<mode_AddResults>
+  0 1 1 2 1 1 1 1</mode_AddResults>
+<c_maxCamerasToUse>2</c_maxCamerasToUse>
+<SerialNumber_StereoCam00left>22960744</SerialNumber_StereoCam00left>
+<SerialNumber_StereoCam01right>22960745</SerialNumber_StereoCam01right>
+<SerialNumber_HandCam02left>21569689</SerialNumber_HandCam02left>
+<SerialNumber_HandCam03right>22984583</SerialNumber_HandCam03right>
+<videoStreamAddressLeft>http://127.0.0.1:800</videoStreamAddressLeft>
+<videoStreamAddressRight>http://127.0.0.1:801</videoStreamAddressRight>
+<videoStreamAddressLeftHand>http://127.0.0.1:802</videoStreamAddressLeftHand>
+<videoStreamAddressRightHand>http://127.0.0.1:803</videoStreamAddressRightHand>
+<TransformationMatrix type_id="opencv-matrix">
+  <rows>4</rows>
+  <cols>4</cols>
+  <dt>d</dt>
+  <data>
+    1. 0. 0. 0. 0. 0. -1. 0. 0. 1. 0. 0. 0. 0. 0. 1.</data></TransformationMatrix>
+<cam_CX>
+  1 1</cam_CX>
+<cam_CY>
+  1 1</cam_CY>
+<cam_dX>
+  8 8</cam_dX>
+<cam_dY>
+  8 8</cam_dY>
+<cam_X>
+  1920 1920</cam_X>
+<cam_Y>
+  1200 1200</cam_Y>
+<img_X>960</img_X>
+<img_Y>600</img_Y>
+<img_coeff>1.</img_coeff>
+<GuiWindowHide>0</GuiWindowHide>
+<GuiAutoStart>0</GuiAutoStart>
+<GuiSelectSorceImg>2</GuiSelectSorceImg>
+<GuiSelectWorkMode>0</GuiSelectWorkMode>
+<GuiSelecttTipeShowWindow>0</GuiSelecttTipeShowWindow>
+<LowHSV>
+  0. 10. 10. 0.</LowHSV>
+<HieghHSV>
+  15. 255. 255. 0.</HieghHSV>
+</opencv_storage>

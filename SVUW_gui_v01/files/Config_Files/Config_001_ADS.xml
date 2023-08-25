@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<opencv_storage>
+<CoefShowWindow>8.0000000000000004e-01</CoefShowWindow>
+<amountFrames>12000</amountFrames>
+<amountcaptureFrames>1</amountcaptureFrames>
+<limit_points>5000</limit_points>
+<filter_ClusterPoints>7</filter_ClusterPoints>
+<limit_WorkingArea>
+  -1000. -1000. 250. 1000. 1000. 6200.</limit_WorkingArea>
+<rad>68.</rad>
+<neighbors>0.</neighbors>
+<setCalibrationImg_folderName>(41a)_MODUL(F0.2_D4)_AIR</setCalibrationImg_folderName>
+<setCalibration_fileName>"./files/StereoCamParams_New.xml"</setCalibration_fileName>
+<setPath_fileList>"./files/Im_list_all_New.txt"</setPath_fileList>
+<usedPath_fileList>"./files/Im_list_all_New.txt"</usedPath_fileList>
+<board_w>9</board_w>
+<board_h>6</board_h>
+<squareSize>2.0100000381469727e+01</squareSize>
+<smbNumDisparities>560</smbNumDisparities>
+<smbBlockSize>17</smbBlockSize>
+<smbPreFilterCap>15</smbPreFilterCap>
+<smbMinDisparity>6</smbMinDisparity>
+<smbTextureThreshold>10</smbTextureThreshold>
+<smbUniquenessRatio>15</smbUniquenessRatio>
+<smbSpeckleWindowSize>100</smbSpeckleWindowSize>
+<smbSpeckleRange>32</smbSpeckleRange>
+<smbDisp12MaxDiff>1</smbDisp12MaxDiff>
+</opencv_storage>

@@ -1,0 +1,1747 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>form01_mainSettings</class>
+ <widget class="QWidget" name="form01_mainSettings">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>535</width>
+    <height>764</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_10">
+   <item row="0" column="0">
+    <widget class="QLabel" name="label">
+     <property name="font">
+      <font>
+       <pointsize>13</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Панель настроек</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="label_ShowTimer">
+     <property name="text">
+      <string>timer_value...</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tab_Aurora">
+      <attribute name="title">
+       <string>Aurora</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_8">
+       <item row="0" column="0">
+        <layout class="QGridLayout" name="gridLayout_central_2">
+         <item row="10" column="0">
+          <spacer name="verticalSpacer_4">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="8" column="0">
+          <layout class="QGridLayout" name="gridLayout_2">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_LowHSV">
+             <property name="text">
+              <string>LowHSV</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QSpinBox" name="spinBox_LowHSV_v">
+             <property name="maximum">
+              <number>255</number>
+             </property>
+             <property name="value">
+              <number>3</number>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_3">
+             <property name="text">
+              <string>HighHSV</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QSpinBox" name="spinBox_HieghHSV_v">
+             <property name="maximum">
+              <number>255</number>
+             </property>
+             <property name="value">
+              <number>6</number>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QSpinBox" name="spinBox_LowHSV_h">
+             <property name="maximum">
+              <number>255</number>
+             </property>
+             <property name="value">
+              <number>1</number>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QSpinBox" name="spinBox_LowHSV_s">
+             <property name="maximum">
+              <number>255</number>
+             </property>
+             <property name="value">
+              <number>2</number>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QSpinBox" name="spinBox_HieghHSV_s">
+             <property name="maximum">
+              <number>255</number>
+             </property>
+             <property name="value">
+              <number>5</number>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QSpinBox" name="spinBox_HieghHSV_h">
+             <property name="maximum">
+              <number>255</number>
+             </property>
+             <property name="value">
+              <number>4</number>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="7" column="0">
+          <widget class="QLabel" name="label_2">
+           <property name="font">
+            <font>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string> Установка параметров цвета в HSV для поиска в режиме Аврора</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <layout class="QGridLayout" name="gridLayout_3">
+           <item row="14" column="1">
+            <widget class="QLineEdit" name="lineEdit_AuroraLogPath"/>
+           </item>
+           <item row="15" column="1">
+            <widget class="QLineEdit" name="lineEdit_AuroraFilesPath"/>
+           </item>
+           <item row="11" column="0" alignment="Qt::AlignLeft">
+            <widget class="QLabel" name="label_TCPhostPort_C">
+             <property name="font">
+              <font>
+               <italic>true</italic>
+              </font>
+             </property>
+             <property name="text">
+              <string>Порт TCP Client</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_4">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>TCP  Aurora</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0">
+            <widget class="QCheckBox" name="checkBox_Send_MomentOjectDetection">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="font">
+              <font>
+               <italic>true</italic>
+              </font>
+             </property>
+             <property name="text">
+              <string>Отправка данных об обнаружении</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="13" column="0">
+            <widget class="QLabel" name="label_AuroraSaves">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Aurora Saves</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QCheckBox" name="checkBox_Receive_OutsideInformationANPA">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="font">
+              <font>
+               <italic>true</italic>
+              </font>
+             </property>
+             <property name="text">
+              <string>Получение данных</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="0">
+            <widget class="QLineEdit" name="lineEdit_TCPhostIP_C"/>
+           </item>
+           <item row="5" column="0">
+            <widget class="QCheckBox" name="checkBox_Send_StatusStateInformation">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="font">
+              <font>
+               <italic>true</italic>
+              </font>
+             </property>
+             <property name="text">
+              <string>Отправка данных о сотоянии</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_5">
+             <property name="font">
+              <font>
+               <italic>true</italic>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>TCP Client</string>
+             </property>
+            </widget>
+           </item>
+           <item row="15" column="0">
+            <widget class="QLabel" name="label_AuroraFilePath">
+             <property name="text">
+              <string>Путь сохранение файлов</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="0" alignment="Qt::AlignLeft">
+            <widget class="QLabel" name="label_TCPhostIP_C">
+             <property name="font">
+              <font>
+               <italic>true</italic>
+               <bold>false</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Адрес TCP Client</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QCheckBox" name="checkBox_StartTcpServer">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="font">
+              <font>
+               <italic>true</italic>
+               <underline>true</underline>
+              </font>
+             </property>
+             <property name="text">
+              <string>Старт TCP Server</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="14" column="0">
+            <widget class="QLabel" name="label_AuroraLogPath">
+             <property name="text">
+              <string>Путь сохранение log-файлов</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="0">
+            <widget class="QCheckBox" name="checkBox_Send_ObjectDetectionCompressedImg">
+             <property name="font">
+              <font>
+               <italic>true</italic>
+              </font>
+             </property>
+             <property name="text">
+              <string>Отправка изображения (буфер)</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QCheckBox" name="checkBox_Send_InitialStateInformation">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="font">
+              <font>
+               <italic>true</italic>
+              </font>
+             </property>
+             <property name="text">
+              <string>Отправка начальных данных</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <widget class="QLabel" name="label_AuroraLantern">
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+               <italic>true</italic>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Фонарь</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLabel" name="label_6">
+             <property name="font">
+              <font>
+               <italic>true</italic>
+               <bold>true</bold>
+               <underline>false</underline>
+               <strikeout>false</strikeout>
+              </font>
+             </property>
+             <property name="text">
+              <string>TCP Server</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QCheckBox" name="checkBox_StartTcpClient">
+             <property name="font">
+              <font>
+               <italic>true</italic>
+               <bold>false</bold>
+               <underline>true</underline>
+              </font>
+             </property>
+             <property name="text">
+              <string>Старт TCP Client</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="0">
+            <widget class="QCheckBox" name="checkBox_Send_ObjectDetectionImgFile">
+             <property name="font">
+              <font>
+               <italic>true</italic>
+              </font>
+             </property>
+             <property name="text">
+              <string>Отправка изображения (файл)</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="12" column="0">
+            <widget class="QLineEdit" name="lineEdit_TCPhostPort_C"/>
+           </item>
+           <item row="9" column="1">
+            <widget class="QSpinBox" name="spinBox_SwitchAuroraLantern"/>
+           </item>
+           <item row="8" column="1">
+            <widget class="QCheckBox" name="checkBox_SwitchAuroraLantern">
+             <property name="font">
+              <font>
+               <italic>true</italic>
+              </font>
+             </property>
+             <property name="text">
+              <string>Включить фонарь</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="1">
+            <widget class="QLabel" name="label_AuroraLanternSerialPortCOMport">
+             <property name="text">
+              <string>TextLabel</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_SGBM">
+      <attribute name="title">
+       <string>SGBM</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_9">
+       <item row="0" column="0">
+        <layout class="QGridLayout" name="gridLayout_central">
+         <item row="8" column="0">
+          <widget class="QComboBox" name="comboBox_ImagePreProcessing">
+           <item>
+            <property name="text">
+             <string>Без обработки</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>equalizeHist (Color RGB)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>CLAHE (Color RGB)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>CLAHE</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>equalizeHist</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>CLAHE + equalizeHist</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="19" column="0">
+          <layout class="QGridLayout" name="gridLayout_5">
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_Y_Low">
+             <property name="maximumSize">
+              <size>
+               <width>70</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string> Y_Low</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QSpinBox" name="spinBox_X_Up">
+             <property name="minimum">
+              <number>-10999</number>
+             </property>
+             <property name="maximum">
+              <number>10999</number>
+             </property>
+             <property name="singleStep">
+              <number>100</number>
+             </property>
+             <property name="value">
+              <number>1000</number>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QSpinBox" name="spinBox_Y_Up">
+             <property name="minimum">
+              <number>-10999</number>
+             </property>
+             <property name="maximum">
+              <number>10999</number>
+             </property>
+             <property name="singleStep">
+              <number>100</number>
+             </property>
+             <property name="value">
+              <number>1000</number>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QSpinBox" name="spinBox_X_Low">
+             <property name="minimum">
+              <number>-10999</number>
+             </property>
+             <property name="maximum">
+              <number>10999</number>
+             </property>
+             <property name="singleStep">
+              <number>100</number>
+             </property>
+             <property name="value">
+              <number>-1000</number>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QSpinBox" name="spinBox_Y_Low">
+             <property name="minimum">
+              <number>-10999</number>
+             </property>
+             <property name="maximum">
+              <number>10999</number>
+             </property>
+             <property name="singleStep">
+              <number>100</number>
+             </property>
+             <property name="value">
+              <number>-1000</number>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QSpinBox" name="spinBox_Z_Low">
+             <property name="minimum">
+              <number>-10999</number>
+             </property>
+             <property name="maximum">
+              <number>10999</number>
+             </property>
+             <property name="singleStep">
+              <number>100</number>
+             </property>
+             <property name="value">
+              <number>250</number>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_Z_Low">
+             <property name="maximumSize">
+              <size>
+               <width>70</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string> Z_Low</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_X_Low">
+             <property name="maximumSize">
+              <size>
+               <width>70</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string> X_Low</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="3">
+            <widget class="QSpinBox" name="spinBox_Z_Up">
+             <property name="minimum">
+              <number>-10999</number>
+             </property>
+             <property name="maximum">
+              <number>10999</number>
+             </property>
+             <property name="singleStep">
+              <number>100</number>
+             </property>
+             <property name="value">
+              <number>8000</number>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QLabel" name="label_X_Up">
+             <property name="maximumSize">
+              <size>
+               <width>70</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string> X_Up</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QLabel" name="label_Y_Up">
+             <property name="maximumSize">
+              <size>
+               <width>70</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string> Y_Up</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QLabel" name="label_Z_Up">
+             <property name="maximumSize">
+              <size>
+               <width>70</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string> Z_Up</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="18" column="0">
+          <widget class="QLabel" name="label_limit_WorkingArea">
+           <property name="text">
+            <string>Лимиты рабочей области</string>
+           </property>
+          </widget>
+         </item>
+         <item row="10" column="0">
+          <layout class="QGridLayout" name="gridLayout_6">
+           <item row="1" column="1">
+            <widget class="QCheckBox" name="checkBox_PointCorrectinForClastering">
+             <property name="text">
+              <string/>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_MetodDisparity">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Метод Disparitie Map</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QComboBox" name="comboBox_MetodDisparity">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+               <bold>false</bold>
+              </font>
+             </property>
+             <property name="currentIndex">
+              <number>3</number>
+             </property>
+             <item>
+              <property name="text">
+               <string>(0)  &lt;&lt;&lt; Stereo BM</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>(1)  &lt;&lt;&lt; StereoSGBM::MODE_SGBM</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>(2)  &lt;&lt;&lt; StereoSGBM::MODE_HH</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>(3)  &lt;&lt;&lt; StereoSGBM::MODE_SGBM_3WAY</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>(4)  &lt;&lt;&lt; StereoSGBM::MODE_HH4</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_PointCorrectinForClastering">
+             <property name="text">
+              <string>Коррекция точек для кластеризации</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_limit_points">
+             <property name="text">
+              <string>Количесво точек для кластеризации</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QSpinBox" name="spinBox_limit_points">
+             <property name="maximum">
+              <number>9111</number>
+             </property>
+             <property name="singleStep">
+              <number>100</number>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="17" column="0">
+          <spacer name="verticalSpacer">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="14" column="0">
+          <layout class="QGridLayout" name="gridLayout"/>
+         </item>
+         <item row="13" column="0">
+          <layout class="QGridLayout" name="gridLayout_11">
+           <property name="sizeConstraint">
+            <enum>QLayout::SetMinAndMaxSize</enum>
+           </property>
+           <property name="verticalSpacing">
+            <number>2</number>
+           </property>
+           <item row="3" column="2">
+            <widget class="QLabel" name="label_smbUniquenessRatio">
+             <property name="maximumSize">
+              <size>
+               <width>1000</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>smbUniquenessRatio</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="3">
+            <widget class="QSpinBox" name="spinBox_smbDisp12MaxDiff">
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="value">
+              <number>20</number>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QSpinBox" name="spinBox_smbNumDisparities">
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="maximum">
+              <number>1600</number>
+             </property>
+             <property name="singleStep">
+              <number>16</number>
+             </property>
+             <property name="value">
+              <number>280</number>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="2">
+            <widget class="QLabel" name="label_smbDisp12MaxDiff">
+             <property name="maximumSize">
+              <size>
+               <width>1000</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>smbDisp12MaxDiff</string>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="0">
+            <widget class="QLabel" name="label_coef_base_dbs">
+             <property name="maximumSize">
+              <size>
+               <width>1000</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>coef_base_dbs</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="2">
+            <widget class="QLabel" name="label_filter_ClusterPoints">
+             <property name="maximumSize">
+              <size>
+               <width>1000</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>filter_ClusterPoints</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="1">
+            <widget class="QDoubleSpinBox" name="doubleSpinBox_coef_pow_dbs">
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="minimum">
+              <double>-1.000000000000000</double>
+             </property>
+             <property name="maximum">
+              <double>10.000000000000000</double>
+             </property>
+             <property name="singleStep">
+              <double>0.010000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <widget class="QSpinBox" name="spinBox_smbMinDisparity">
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="1">
+            <widget class="QDoubleSpinBox" name="doubleSpinBox_coef_base_dbs">
+             <property name="decimals">
+              <number>6</number>
+             </property>
+             <property name="maximum">
+              <double>5.000000000000000</double>
+             </property>
+             <property name="singleStep">
+              <double>0.000010000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="3">
+            <widget class="QSpinBox" name="spinBox_smbSpeckleWindowSize">
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="maximum">
+              <number>200</number>
+             </property>
+             <property name="singleStep">
+              <number>1</number>
+             </property>
+             <property name="value">
+              <number>97</number>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="3">
+            <widget class="QSpinBox" name="spinBox_smbSpeckleRange">
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="maximum">
+              <number>200</number>
+             </property>
+             <property name="value">
+              <number>64</number>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="label_smbPreFilterCap">
+             <property name="maximumSize">
+              <size>
+               <width>1000</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>smbPreFilterCap</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="2">
+            <widget class="QLabel" name="label_smbSpeckleRange">
+             <property name="maximumSize">
+              <size>
+               <width>1000</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>smbSpeckleRange</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="3">
+            <widget class="QSpinBox" name="spinBox_filter_ClusterPoints">
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="3">
+            <widget class="QSpinBox" name="spinBox_dbsRad">
+             <property name="maximum">
+              <number>500</number>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="2">
+            <widget class="QLabel" name="label_smbSpeckleWindowSize">
+             <property name="maximumSize">
+              <size>
+               <width>1000</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>smbSpeckleWindowSize</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_smbBlockSize">
+             <property name="maximumSize">
+              <size>
+               <width>1000</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>smbBlockSize</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="3">
+            <widget class="QSpinBox" name="spinBox_dbsNeighbors">
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="3">
+            <widget class="QSpinBox" name="spinBox_smbUniquenessRatio">
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="value">
+              <number>15</number>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="2">
+            <widget class="QLabel" name="label_dbsNeighbors">
+             <property name="maximumSize">
+              <size>
+               <width>1000</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>DBScan_neighbors</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="0">
+            <widget class="QLabel" name="label_smbTextureThreshold">
+             <property name="maximumSize">
+              <size>
+               <width>1000</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>smbTextureThreshold</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_smbNumDisparities">
+             <property name="maximumSize">
+              <size>
+               <width>1000</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>smbNumDisparities</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1">
+            <widget class="QSpinBox" name="spinBox_smbPreFilterCap">
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="maximum">
+              <number>300</number>
+             </property>
+             <property name="value">
+              <number>31</number>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QSpinBox" name="spinBox_smbBlockSize">
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="minimum">
+              <number>5</number>
+             </property>
+             <property name="maximum">
+              <number>200</number>
+             </property>
+             <property name="singleStep">
+              <number>2</number>
+             </property>
+             <property name="value">
+              <number>17</number>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="1">
+            <widget class="QSpinBox" name="spinBox_smbTextureThreshold">
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0">
+            <widget class="QLabel" name="label_smbMinDisparity">
+             <property name="maximumSize">
+              <size>
+               <width>1000</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>smbMinDisparity</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="0">
+            <widget class="QLabel" name="label_coef_pow_dbs">
+             <property name="maximumSize">
+              <size>
+               <width>1000</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>coef_pow_dbs</string>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="2">
+            <widget class="QLabel" name="label_dbsRad">
+             <property name="maximumSize">
+              <size>
+               <width>1000</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>DBScan_Rad</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="9" column="0">
+          <widget class="QLabel" name="label_7">
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Настройки диспаратности и кластеризации</string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="0">
+          <widget class="QLabel" name="label_9">
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Настройки предобработки изображений</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="0">
+          <spacer name="verticalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_3dCloud">
+      <attribute name="title">
+       <string>3D Cloud</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_4">
+       <item row="3" column="0">
+        <layout class="QGridLayout" name="gridLayout_7">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <item row="5" column="3">
+          <widget class="QSlider" name="horizontalSlider_Tz">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="minimum">
+            <number>-5000</number>
+           </property>
+           <property name="maximum">
+            <number>0</number>
+           </property>
+           <property name="singleStep">
+            <number>10</number>
+           </property>
+           <property name="value">
+            <number>-2000</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="2">
+          <widget class="QLabel" name="label_30">
+           <property name="text">
+            <string>Dz</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="3">
+          <widget class="QSlider" name="horizontalSlider_Tx">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="minimum">
+            <number>-2000</number>
+           </property>
+           <property name="maximum">
+            <number>2000</number>
+           </property>
+           <property name="singleStep">
+            <number>10</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="1">
+          <widget class="QSlider" name="horizontalSlider_Scale">
+           <property name="minimum">
+            <number>5</number>
+           </property>
+           <property name="maximum">
+            <number>500</number>
+           </property>
+           <property name="value">
+            <number>100</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QLabel" name="label_26">
+           <property name="text">
+            <string>Tx</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="3">
+          <widget class="QSlider" name="horizontalSlider_Ty">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="minimum">
+            <number>-2000</number>
+           </property>
+           <property name="maximum">
+            <number>2000</number>
+           </property>
+           <property name="singleStep">
+            <number>10</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="2">
+          <widget class="QLabel" name="label_27">
+           <property name="text">
+            <string>Ty</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_23">
+           <property name="text">
+            <string>Rx</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QLabel" name="label_25">
+           <property name="text">
+            <string>Rz</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_24">
+           <property name="text">
+            <string>Ry</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QSlider" name="horizontalSlider_Ry">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="minimum">
+            <number>-90</number>
+           </property>
+           <property name="maximum">
+            <number>90</number>
+           </property>
+           <property name="singleStep">
+            <number>5</number>
+           </property>
+           <property name="value">
+            <number>0</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="2">
+          <widget class="QLabel" name="label_28">
+           <property name="text">
+            <string>Tz</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="3">
+          <widget class="QSlider" name="horizontalSlider_Dz">
+           <property name="minimum">
+            <number>-5000</number>
+           </property>
+           <property name="maximum">
+            <number>0</number>
+           </property>
+           <property name="singleStep">
+            <number>10</number>
+           </property>
+           <property name="value">
+            <number>-3000</number>
+           </property>
+           <property name="sliderPosition">
+            <number>-3000</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="0">
+          <widget class="QLabel" name="label_29">
+           <property name="text">
+            <string>Scale</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="1">
+          <widget class="QSlider" name="horizontalSlider_Rz">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="tabletTracking">
+            <bool>false</bool>
+           </property>
+           <property name="minimum">
+            <number>-90</number>
+           </property>
+           <property name="maximum">
+            <number>90</number>
+           </property>
+           <property name="singleStep">
+            <number>5</number>
+           </property>
+           <property name="value">
+            <number>0</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QSlider" name="horizontalSlider_Rx">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="minimum">
+            <number>-90</number>
+           </property>
+           <property name="maximum">
+            <number>90</number>
+           </property>
+           <property name="singleStep">
+            <number>5</number>
+           </property>
+           <property name="value">
+            <number>0</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_8">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Параметры для вращения и перемещения облака точкек</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <spacer name="verticalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="0" column="0">
+        <spacer name="verticalSpacer_5">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Minimum</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab">
+      <attribute name="title">
+       <string>РТК</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_15">
+       <item row="0" column="0">
+        <layout class="QGridLayout" name="gridLayout_12">
+         <item row="8" column="0">
+          <widget class="QCheckBox" name="checkBox_ShowMarkersImgRTK_05">
+           <property name="text">
+            <string>5) Текст возле кнопки</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <layout class="QGridLayout" name="gridLayout_13">
+           <item row="1" column="0">
+            <widget class="QCheckBox" name="checkBox_ShowMarkersImgRTK_02">
+             <property name="minimumSize">
+              <size>
+               <width>185</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>2) Центр кластера</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QRadioButton" name="radioButton_ShowMarkersImgRTK_02_1">
+             <property name="minimumSize">
+              <size>
+               <width>150</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>геометрический центр</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QRadioButton" name="radioButton_ShowMarkersImgRTK_02_2">
+             <property name="text">
+              <string>2D центр</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="2" column="0">
+          <widget class="QCheckBox" name="checkBox_ShowMarkersImgRTK_00">
+           <property name="text">
+            <string>0) Показать рамки</string>
+           </property>
+          </widget>
+         </item>
+         <item row="9" column="0">
+          <widget class="QCheckBox" name="checkBox_ShowMarkersImgRTK_06">
+           <property name="text">
+            <string>6) Отображение клика мыши</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_10">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+             <italic>true</italic>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Прорисовка информации на экране (РТК)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="10" column="0">
+          <widget class="QCheckBox" name="checkBox_ShowMarkersImgRTK_07">
+           <property name="text">
+            <string>7) Номера выделенного кластера возле кнопки</string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="0">
+          <widget class="QCheckBox" name="checkBox_ShowMarkersImgRTK_04">
+           <property name="text">
+            <string>4) Отображение кнопки</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QCheckBox" name="checkBox_ShowMarkersImgRTK_01">
+           <property name="text">
+            <string>1) Показать точки</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <spacer name="verticalSpacer_7">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="5" column="0">
+          <layout class="QGridLayout" name="gridLayout_14">
+           <item row="0" column="1">
+            <widget class="QRadioButton" name="radioButton_ShowMarkersImgRTK_03_1">
+             <property name="minimumSize">
+              <size>
+               <width>150</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>только &quot;z&quot;</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QRadioButton" name="radioButton_ShowMarkersImgRTK_03_2">
+             <property name="text">
+              <string>&quot;z&quot; и номер кластера</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QCheckBox" name="checkBox_ShowMarkersImgRTK_03">
+             <property name="minimumSize">
+              <size>
+               <width>185</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>3) Текс возле рамки объекта</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item row="1" column="0">
+        <spacer name="verticalSpacer_6">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>317</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

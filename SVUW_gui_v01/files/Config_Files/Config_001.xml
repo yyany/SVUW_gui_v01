@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<opencv_storage>
+<CoefShowWindow>1.0</CoefShowWindow>
+<amountFrames>1200000</amountFrames>
+<amountcaptureFrames>1</amountcaptureFrames>
+<limit_points>1000</limit_points>
+<filter_ClusterPoints>20</filter_ClusterPoints>
+<limit_WorkingArea>
+  -4000. -4000. 350. 4000. 4000. 7100.</limit_WorkingArea>
+<rad>40.</rad>
+<neighbors>0.</neighbors>
+<coef_base_dbs>0.007325</coef_base_dbs>
+<coef_pow_dbs>0.85</coef_pow_dbs>
+<path_WriteResultVideo>"./files/VideoResult/"</path_WriteResultVideo>
+<path_WriteSourceVideo>"./files/VideoSource/"</path_WriteSourceVideo>
+<timeLength_VideoFile>17.5</timeLength_VideoFile>
+<CurrentCalib_filename>"./files/Calibration_Files/(61a)_(960p)_StereoModule(F1.2_D2)_AIR.xml"</CurrentCalib_filename>
+<setNewCalibImg_folderName>"(41a)_MODUL(F1.2_D2)_WATER"</setNewCalibImg_folderName>
+<setNewCalib_fileName>"./files/StereoCamParams_New.xml"</setNewCalib_fileName>
+<setNewCalib_fileList>"./files/Im_list_all_New.txt"</setNewCalib_fileList>
+<usedNewCalib_fileList>"./files/Im_list_all_New.txt"</usedNewCalib_fileList>
+<board_w>9</board_w>
+<board_h>6</board_h>
+<squareSize>2.0100000381469727e+01</squareSize>
+<smbNumDisparities>240</smbNumDisparities>
+<smbBlockSize>9</smbBlockSize>
+<smbPreFilterCap>17</smbPreFilterCap>
+<smbMinDisparity>0</smbMinDisparity>
+<smbTextureThreshold>0</smbTextureThreshold>
+<smbUniquenessRatio>27</smbUniquenessRatio>
+<smbSpeckleWindowSize>68</smbSpeckleWindowSize>
+<smbSpeckleRange>21</smbSpeckleRange>
+<smbDisp12MaxDiff>21</smbDisp12MaxDiff>
+<startThread>1000</startThread>
+<timeStep_Thread>30</timeStep_Thread>
+<mode_AddResults>
+  1 0 0 0 1 0 0 0</mode_AddResults>
+<c_maxCamerasToUse>2</c_maxCamerasToUse>
+<SerialNumber_StereoCam00left>22960744</SerialNumber_StereoCam00left>
+<SerialNumber_StereoCam01right>22960745</SerialNumber_StereoCam01right>
+<SerialNumber_HandCam02left>21569689</SerialNumber_HandCam02left>
+<SerialNumber_HandCam03right>22984583</SerialNumber_HandCam03right>
+<videoStreamAddressLeft>"http://127.0.0.1:800"</videoStreamAddressLeft>
+<videoStreamAddressRight>"http://127.0.0.1:801"</videoStreamAddressRight>
+<videoStreamAddressLeftHand>"http://127.0.0.1:802"</videoStreamAddressLeftHand>
+<videoStreamAddressRightHand>"http://127.0.0.1:803"</videoStreamAddressRightHand>
+<TransformationMatrix type_id="opencv-matrix">
+  <rows>4</rows>
+  <cols>4</cols>
+  <dt>d</dt>
+  <data>
+    1. 0. 0. 0. 0. 0. -1. 0. 0. 1. 0. 0. 0. 0. 0. 1.</data></TransformationMatrix>
+<cam_CX>
+  1 1</cam_CX>
+<cam_CY>
+  1 1</cam_CY>
+<cam_dX>
+  8 8</cam_dX>
+<cam_dY>
+  8 8</cam_dY>
+<cam_X>
+  1920 1920</cam_X>
+<cam_Y>
+  1200 1200</cam_Y>
+<img_X>960</img_X>
+<img_Y>600</img_Y>
+<img_coeff>1.</img_coeff>
+<GuiWindowHide>0</GuiWindowHide>
+<GuiAutoStart>0</GuiAutoStart>
+<GuiSelectWorkMode>0</GuiSelectWorkMode>
+<GuiSelectSorceImg>4</GuiSelectSorceImg>
+<GuiSelectCamType>5</GuiSelectCamType>
+<GuiSelecttTipeShowWindow>0</GuiSelecttTipeShowWindow>
+<LowHSV>
+  0. 10. 10. 10.</LowHSV>
+<HieghHSV>
+  11. 255. 251. 0.</HieghHSV>
+<TCPhostIP_C>"10.32.31.37"</TCPhostIP_C>
+<TCPhostPort_C>10099</TCPhostPort_C>
+<TCPhostPort_S>10098</TCPhostPort_S>
+<TCPsetTimerInterval>1000</TCPsetTimerInterval>
+<Aurora_AuroraLogPath>"./files/Aurora/Log/"</Aurora_AuroraLogPath>
+<Aurora_AuroraFilesPath>"./files/Aurora/"</Aurora_AuroraFilesPath>
+<AuroraLantern_SerialPort_value>21</AuroraLantern_SerialPort_value>
+<AuroraLantern_SerialPort_COMport>"COM3"</AuroraLantern_SerialPort_COMport>
+<CamSN>
+  "02K37741088" "02K37741018"</CamSN>
+</opencv_storage>
+ 

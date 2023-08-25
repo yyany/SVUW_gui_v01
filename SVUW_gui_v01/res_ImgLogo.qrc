@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/res_ImgLogo">
+        <file>files/Logo/logo5_100.png</file>
+        <file>files/Logo/logoCalib01_100.png</file>
+        <file>files/Logo/logoSTV01_100.png</file>
+        <file>files/Logo/logoAurora02_100.jpg</file>
+        <file>files/Logo/logo_IUTS.jpg</file>
+        <file>files/Logo/logoAurora01_100.png</file>
+        <file>files/Logo/logoIPcam01_100.jpg</file>
+        <file>files/Logo/basler_logo.jpg</file>
+        <file>files/Logo/HikVision.jpg</file>
+        <file>files/Logo/png-transparent.png</file>
+        <file>files/Logo/videot.png</file>
+        <file>files/Logo/IP.jpg</file>
+        <file>files/Logo/ip-camera.png</file>
+        <file>files/Logo/image.png</file>
+        <file>files/Logo/RTK2.jpg</file>
+    </qresource>
+</RCC>

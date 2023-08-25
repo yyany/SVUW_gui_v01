@@ -1,0 +1,110 @@
+CoefShowWindow;               	  // Коэффициент изменения размера выводимого изображения
+amountcaptureFrames;              // количесво кадров получаемых с Basler камеры за один раз
+amountFrames;                      // количество циклов ~ 120 циклов = 1 минуте.
+limit_points;                     // уменьшение количесва найденых точек для кластеризации
+filter_ClusterPoints;     	// фильтр отсеивает прорисовку кластеров с количесвом точек менее чем ...
+limit_WorkingArea = {-1.0e3, -1.0e3, 250, 1.0e3, 1.0e3, 1.20e3}; // Границы рабоче зоны для стереокамры СТЗ, за её пределами ничего не видит
+
+rad;                               // Connectivity radius between points, points may be connected if distance between them less then the radius.
+neighbors;                        // minimum number of shared neighbors that is required for establish links between points.
+
+% coef_base_dbs = 0.00055075; % коэф-т среды (вода)
+% coef_base_dbs = 0.0007325; % коэф-т среды (воздух)
+coef_base_dbs  // Параметры формулы преобразования равноменого сгущения для кластеризации
+coef_pow_dbs   // Параметры формулы преобразования равноменого сгущения для кластеризации
+
+setCalibrationImg_folderName_;   // папка для сохранения калибровочных изображений
+setCalibration_fileName_;       // имя файла калибровки
+setPath_fileList_;
+usedPath_fileList_;
+ board_w;                       // ширена калибровочной доски
+board_h;                       // высота калибровочной доски
+squareSize;                  	 // размер квадрата калибровочной доски
+smbNumDisparities;  		// Maximum disparity minus minimum disparity. This parameter must be divisible by 16.
+smbBlockSize;          	   	// Matched block size. It must be an odd number >=1
+smbPreFilterCap;      		 // Truncation value for the prefiltered image pixels
+smbMinDisparity;      		 // Minimum possible disparity value
+smbTextureThreshold;    	 //
+smbUniquenessRatio;      	// Margin in percentage by which the best (minimum) computed cost function value should “win” the second best value to consider the found match correct. Normally, a value within the 5-15 range is good enough
+smbSpeckleWindowSize;  		// Maximum size of smooth disparity regions to consider their noise speckles and invalidate
+smbSpeckleRange;         	  // Maximum disparity variation within each connected component
+smbDisp12MaxDiff;  
+
+startThread; // Задержка запуска потоков в порядке очередности
+timeStep_Thread; // Время шага одной операции в потоке
+
+mode_AddResults = {0,1,1,2,1,1}; // Переменная для настроек прорисовки на изображении
+// 0 - рамки                        0 - без, 1 - с рамками
+// 1 - точки: 				0 - без, 1 - с точками
+// 2 - центр кластера: 			0 - без, 1 -  с геометрическим центром, 2 -  с 2D центром
+// 3 - текс возле рамки объекта: 	0 - без, 1 - только "z", 2 - "z" и номер кластера            
+// 4 - отображение кнопки:		0 - выкл., 1 - вкл. (отображается)
+// 5 - текст возле кнопки:		0 - выкл., 1 - вкл. (отображается)
+// 6 - отображение клика мыши:		0 - выкл., 1 - вкл. (отображается)
+// 7 - номера выделенного 
+	кластера возле кнопки:  0 - выкл., 1 - вкл. (отображается)
+
+// Параметры выбора Basler камер
+"c_maxCamerasToUse" 			// Количесво задействованных камер
+"SerialNumber_StereoCam00left" 		// Серийный номер левой камеры стереокамеры
+"SerialNumber_StereoCam01right"		// Серийный номер правой камеры стереокамеры
+"SerialNumber_HandCam02left" 		// Серийный номер  камеры на левой руке манипулятора
+"SerialNumber_HandCam03right"		// Серийный номер  камеры на првавой руке манипулятора
+
+SerialNumber acA1920-50gc 
+22960744 StereoCam00left
+22960745 StereoCam01right
+22960746 HandCam02left
+22984583 HandCam03right
+
+
+SerialNumber acA1300-60gc
+21569689 StereoCam00left
+21569694 StereoCam01right
+
+
+
+// Параметры задания IP адрес для IP камеры
+"videoStreamAddressLeft"           // IP адрес IP камеры:  левой камеры стереокамеры
+"videoStreamAddressRight"         // IP адрес IP камеры: правой камеры стереокамеры
+"videoStreamAddressLeftHand"     // IP адрес IP камеры:  камеры на левой руке манипулятора
+"videoStreamAddressRightHand"    // IP адрес IP камеры:  камеры на првавой руке манипулятора
+
+//  Переменные управления размером изображения Basler камер
+<cam_CX> 	// Центрирование изображения по горизонтали 
+<cam_CY> 	// Центрирование изображения по вертикали
+<cam_dX> 	// Горизонтальный сдвиг активной области относительно левой стороны сенсора (в пикселях)
+<cam_dY>	// Вертикальный сдвиг активной области относительно верхней части сенсора (в пикселях)
+<cam_X>	// Ширина активной области (активной зоны) камеры в пикселях
+<cam_Y>	 // Высота активной области (активной зоны) камеры в пикселях.
+// Параметры сжатия изображения
+<img_X> 	// Ширина сжатого изображения
+<img_Y>	// Высота сжатого изображения
+<img_coeff>	// Коэфициент восколько раз уменьшено изображение (не связан с размерами img_X img_Y)
+
+
+SerialNumber acA1920-50gc
+1920 px x 1200 px  cam_dXY = 8
+
+SerialNumber acA1300-60gc
+1280 px x 1024 px cam_dXY = 0
+
+
+//  Переменные автозапуска GUI
+<GuiWindowHide>				// Скрытия окна интерфейса
+<GuiAutoStart>   				// Авто запустк программы без кнопки старт
+<GuiSelectWorkMode> 			// Выбор режима работы: Обычный, Калибровка, "Аврора"
+<GuiSelectSorceImg> 			// Выбор источника изображений: камера, видео итд
+<GuiSelectCamType>                  // Выбор типа камеры
+<GuiSelecttTipeShowWindow>		// Выбор картинки, кот. выводится
+
+
+
+//  Переменные параметров цвета для поиска по объектов (Олег К.)
+<LowHSV> 		// Нижний граница порога HSV    0. 130. 40. 0
+<HieghHSV>	 	// Верхняя граница порога HSV  15. 220. 220. 0.
+
+// Адрес и порт для TCP клиента
+TCP.TCPhostIP_C    // адрес  TCP клиента
+TCP.TCPhostPort_C  // порт для TCP клиента
+
