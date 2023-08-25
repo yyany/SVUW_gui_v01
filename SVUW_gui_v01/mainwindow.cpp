@@ -6281,8 +6281,8 @@ void MainWindow::on_pushButton_Start3DRuler_clicked()
     obj_ptrf_temp->setResultImage ( obj_ptrf->getResultImage()  );
 
 
-    // Show tool window    
-    toolWindow->setData(obj_ptrf_temp->getImgRemap_StereoPair().at(1), obj_ptrf_temp->get_vuxyzrgb());
+    // Show tool window
+    toolWindow->setData(obj_ptrf_temp->getImgColorPreProcess_StereoPair().at(0), obj_ptrf_temp->get_vuxyzrgb());
 
     // открываем окно
     toolWindow->show();
