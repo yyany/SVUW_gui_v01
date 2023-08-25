@@ -6311,13 +6311,12 @@ void MainWindow::on_pushButton_Start3DRuler_clicked()
     // Show tool window
     ToolWindow *toolWindow = new ToolWindow(obj_ptrf_temp->getImgOpenCV_1left(), obj_ptrf_temp->get_vuxyzrgb(), this);
     // toolWindow->layout()->setSizeConstraint(QLayout::SetFixedSize);
-    //toolWindow->exec();
+    toolWindow->exec();
 
     // открываем окно
-    toolWindow->show();
-    toolWindow->activateWindow();
-//    delete toolWindow;
-
+    // toolWindow->show();
+    // toolWindow->activateWindow();
+    // delete toolWindow;
 
 }
 
