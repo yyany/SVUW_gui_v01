@@ -3,11 +3,11 @@
 <CoefShowWindow>1.0</CoefShowWindow>
 <amountFrames>1200000</amountFrames>
 <amountcaptureFrames>1</amountcaptureFrames>
-<limit_points>1000</limit_points>
+<limit_points>2000</limit_points>
 <filter_ClusterPoints>20</filter_ClusterPoints>
 <limit_WorkingArea>
   -4000. -4000. 350. 4000. 4000. 7100.</limit_WorkingArea>
-<rad>40.</rad>
+<rad>120.</rad>
 <neighbors>0.</neighbors>
 <coef_base_dbs>0.007325</coef_base_dbs>
 <coef_pow_dbs>0.85</coef_pow_dbs>
@@ -34,7 +34,7 @@
 <startThread>1000</startThread>
 <timeStep_Thread>30</timeStep_Thread>
 <mode_AddResults>
-  1 0 0 0 1 0 0 0</mode_AddResults>
+  1 1 1 1 1 0 0 0</mode_AddResults>
 <c_maxCamerasToUse>2</c_maxCamerasToUse>
 <SerialNumber_StereoCam00left>22960744</SerialNumber_StereoCam00left>
 <SerialNumber_StereoCam01right>22960745</SerialNumber_StereoCam01right>
