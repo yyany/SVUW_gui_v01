@@ -85,6 +85,7 @@
 #include <chrono>
 #include <fstream>
 
+#include <cerrno> // Для кода ошибок в DarkNet-test-simple
 
 // Для Одометрии (Леша)
 #include <iomanip>
@@ -375,106 +376,68 @@ float expRunningAverage(float newVal, int filVal);
 //  DarkNet-test-simple (начало)
 //===================================
 
-class DarkNetDetector {
+
+
+
+/** Параметры обработки */
+static const float SCORE_THRESHOLD      = 0.50;
+static const float NMS_THRESHOLD        = 0.45;
+static const float CONFIDENCE_THRESHOLD = 0.45;
+
+/** Параметры шрифтов */
+static const float FONT_SCALE = 0.7;
+static const int   THICKNESS  = 1;
+
+/** Цветовые константы */
+static cv::Scalar BLACK  = cv::Scalar(0,   0,   0);
+static cv::Scalar YELLOW = cv::Scalar(0, 255, 255);
+static cv::Scalar RED    = cv::Scalar(0,   0, 255);
+static cv::Scalar GREEN  = cv::Scalar(0, 255,   0);
+
+/** Класс детектора */
+class NeuralNetDetector {
 private:
+    /** Структура нейросети */
     cv::dnn::Net network;
-    std::vector<std::string> class_names;
-    bool detection_flag = false;
-    std::vector<std::string> detection_info;
-    bool class_names_flag;
-    std::ofstream log_file;
-    std::stringstream buf;
-    void get_names(void) {
-        class_names_flag = true;
-        std::ifstream class_file("./files/nn/darknet.names");
-        if (!class_file) {
-            class_names_flag = false;
-            std::cerr << "Failed to open classes names!\n";
-            return;
-        }
-        std::string line;
-        while (std::getline(class_file, line)) {
-            class_names.push_back(line);
-        }
-        class_file.close();
-    }
-    int init() {
-        get_names();
-        std::string model = "./files/nn/darknet.weights";
-        std::string config = "./files/nn/darknet.cfg";
-        network = cv::dnn::readNet(model, config, "Darknet");
-        if (network.empty()) {
-            return 1;
-        } else {
-            network.setPreferableBackend(cv::dnn::DNN_BACKEND_DEFAULT);
-            network.setPreferableTarget(cv::dnn::DNN_TARGET_CPU);
-        }
-
-        return 0;
-    }
+    /** Ширина и высота входного изображения */
+    int input_width = 640;
+    int input_height = 640;
+    /** Вектор распознаваемых классов */
+    std::vector<std::string> classes;
+    /** Структуры для хранения результатов обработки */
+    std::vector<int> classes_id_set;
+    std::vector<cv::Rect> boxes_set;
+    std::vector<float> confidences_set;
+    std::vector<std::string> classes_set;
+    cv::Mat processed_image;
+    /** Время обработки */
+    float inference_time;
+    /** Получить строковые значения классов */
+    errno_t read_classes(const std::string file_path);
+    /** Инициализация нейросети */
+    errno_t init_network(const std::string model_path,
+                         const std::string classes_path);
+    /** Отрисовка метки */
+    void draw_label(cv::Mat& img, std::string label, int left, int top);
+    /** Предобработка результатов */
+    std::vector<cv::Mat> pre_process(cv::Mat &img, cv::dnn::Net &net);
+    /** Постобработка результатов */
+    cv::Mat post_process(cv::Mat &img, std::vector<cv::Mat> &outputs,
+                         const std::vector<std::string> &class_name);
 public:
-    DarkNetDetector() {
-        if (!init()) {
-            std::cout << "Neural network been inited!" << std::endl;
-        } else {
-            std::cout << "Failed to init neural network!" << std::endl;
-        }
-    }
-    bool check(cv::Mat &img, bool log) {
-        bool ret = false;
-        cv::Mat blobFromImg;
-        bool swapRB = true;
-        cv::dnn::blobFromImage(img, blobFromImg, 1, cv::Size(416, 416), cv::Scalar(), swapRB, false);
-        float scale = 1.0 / 255.0;
-        cv::Scalar mean = 0;
-        network.setInput(blobFromImg, "", scale, mean);
-        cv::Mat outMat;
-        network.forward(outMat);
-        int rowsNoOfDetection = outMat.rows;
-        int colsCoordinatesPlusClassScore = outMat.cols;
-        detection_info.clear();
-        for (int j = 0; j < rowsNoOfDetection; ++j) {
-            cv::Mat scores = outMat.row(j).colRange(5, colsCoordinatesPlusClassScore);
-            cv::Point PositionOfMax;
-            double confidence;
-            cv::minMaxLoc(scores, 0, &confidence, 0, &PositionOfMax);
-            if (confidence > 0.0001) {
-                if (log) {
-                    if (class_names_flag) {
-                        log_file.open("./files/nn/log.txt", std::ios_base::app);
-                        buf << "Class: " << class_names[PositionOfMax.x] << " | Confidence: " << confidence << std::endl;
-                        detection_info.push_back(buf.str());
-                        buf.clear();
-                        buf.str("");
-                        log_file << "Class: " << class_names[PositionOfMax.x] << " | Confidence: " << confidence << std::endl;
-                        log_file.close();
-                    } else {
-                        log_file.open("./files/nn/log.txt", std::ios_base::app);
-                        buf << "Class: " << PositionOfMax.x + 1 << " | Confidence: " << confidence << std::endl;
-                        detection_info.push_back(buf.str());
-                        buf.clear();
-                        buf.str("");
-                        log_file << "Class: " << PositionOfMax.x + 1 << " | Confidence: " << confidence << std::endl;
-                        log_file.close();
-                    }
-                }
-                detection_flag = true;
-                ret = true;
-            }
-        }
-        detection_flag = ret;
-
-        if (!detection_flag) detection_info.push_back("-");
-
-        return ret;
-    }
-    bool state() {
-        return detection_flag;
-    }
-    std::vector<std::string> info() {
-        return detection_info;
-    }
+    NeuralNetDetector(const std::string model, const std::string classes);
+    NeuralNetDetector(const std::string model, const std::string classes,
+                      int width, int height);
+    std::vector<float> get_confidences(void) { return confidences_set; }
+    std::vector<cv::Rect> get_boxes(void) { return boxes_set; }
+    std::vector<int> get_class_ids(void) { return classes_id_set; }
+    std::vector<std::string> get_classes(void) { return classes_set; }
+    float get_inference(void) { return inference_time; }
+    std::string get_info(void);
+    cv::Mat process(cv::Mat &img);
+    cv::Mat get_image(void);
 };
+
 
 
 //===================================

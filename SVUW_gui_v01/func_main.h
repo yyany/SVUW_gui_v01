@@ -40,6 +40,7 @@ struct Objs_ptr     // Для хранения ссылок на объекты 
     TCPServer* objTcpServer_ptr;
     TCPClient* objTcpClient_ptr;
     cl_VideoStreamer* objp_VideoStreamer;  // ссылка на объект класса для видео стрима
+    ADS::NeuralNetDetector * NeuralNetDetector;   // ссылка на нейронной сети для распознания объектов на изображении
 
 
 };
@@ -188,7 +189,7 @@ struct DarkNet    // DarkNet
 
     bool reply = false;
 
-    std::vector <std::string> replyAll = {"-", "-", "-"};
+    std::string replyAll = "-";
 
 };
 

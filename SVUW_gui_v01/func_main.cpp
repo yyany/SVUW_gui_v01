@@ -235,9 +235,10 @@ void threadFuncCommon(ADS::cl_DenseStereo& obj,
 
 
      //===================================
-     //  DarkNet-test-simple
+     //  DarkNet-test-simple (declaration)
      //===================================
-     ADS::DarkNetDetector * DND = new ADS::DarkNetDetector;
+
+     ADS::NeuralNetDetector * detector = settings.Objs_ptr.NeuralNetDetector;
 
 
 
@@ -432,7 +433,14 @@ void threadFuncCommon(ADS::cl_DenseStereo& obj,
         case 175:
             //
 
+            {
 
+                // Запуст окна для вывода результатов
+                cv::namedWindow("Window_img", cv::WINDOW_AUTOSIZE); // Создаем  окна
+                cv::waitKey(10);
+
+
+            }
 
 
             break;
@@ -972,28 +980,38 @@ void threadFuncCommon(ADS::cl_DenseStereo& obj,
                 // vector<cv::Mat>  StereoPair_temp = obj.getImgRemap_StereoPair();
                // bool reply2 =  ADS::dnn_check(network, StereoPair_temp.at(0), true);
 
-
-                cv::Mat  Img_temp = obj.getImgOpenCV_1left();
+                // cv::Mat  Img_temp = obj.getImgOpenCV_1left();
+                cv::Mat  Img_temp = obj.getImgColorPreProcess_StereoPair().at(0);
                // cv::Mat  Img_temp = cv::imread("./files/nn/imgLeft_1001.bmp", cv::IMREAD_UNCHANGED);
 
                 std::cout << "===>>> imread = " << Img_temp.empty() << std::endl;
 
-                bool reply2 =  DND->check( Img_temp, true);
-
-                std::cout << "===>>> reply2 = " << reply2 << std::endl;
-
-                settings.DarkNet.reply = reply2;
-
-                if (reply2)
-                std::cout << "===>>> Neural network been reply !!!!!!!!!!!!!!!!!!!" << std::endl;
 
 
-                std::vector<std::string> info = DND->info();
+                detector->process( Img_temp);
+                cv::Mat replyImg = detector->get_image();
 
+                std::string info = detector->get_info();
 
                 settings.DarkNet.replyAll = info;
 
-                for (size_t i = 0; i < info.size(); i++) std::cout << info[i];
+                //for (size_t i = 0; i < info.size(); i++) std::cout << info[i];
+
+
+
+
+                //=========================================
+                // Вывод в окно OpenCV
+                //=========================================
+
+
+                // Запуст окна для вывода результатов
+                // cv::namedWindow("Window_img", cv::WINDOW_AUTOSIZE); // Создаем  окна
+                cv::imshow("Window_img", replyImg);
+                cv::waitKey(10);
+
+
+
 
 
 
@@ -1270,10 +1288,22 @@ void threadFuncCommon(ADS::cl_DenseStereo& obj,
             // cl_VideoStreamer* objp_VideoStreamer = settings.Objs_ptr.objp_VideoStreamer;
             objp_VideoStreamer->Stop_VideoStream();
 
-
+            break;
         }
 
 
+        case 975:
+        {
+
+//           cv::namedWindow("Window_img", cv::WINDOW_AUTOSIZE); // Создаем  окна
+           cv::destroyWindow("Window_img");
+//             cv::destroyAllWindows();
+
+           cv::waitKey(10);
+           break;
+
+
+        }
 
 
 

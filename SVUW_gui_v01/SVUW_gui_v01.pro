@@ -10,7 +10,6 @@ QT       += testlib       # для подключения #include <QTest>
 QT       += multimedia    # для камер
 QT       += datavisualization # для визуализации
 
-
 # Qt Test - это платформа для модульного тестирования приложений и библиотек на основе Qt.
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
@@ -91,13 +90,13 @@ FORMS += \
 
 # OpenCV
 # opencv-4.2.0-vc14_vc15
-INCLUDEPATH += \
-                C:\libs\opencv\openCV_MSVC\build\include \
-
-
-# opencv-4.6.0-vc14_vc15
 #INCLUDEPATH += \
-#                C:\libs\opencv\opencv-4.6.0-vc14_vc15\build\include \
+#                C:\libs\opencv\openCV_MSVC\build\include \
+
+
+# opencv-4.8.0-vc14_vc15
+INCLUDEPATH += \
+                C:\libs\opencv\opencv-4.8.0-vc14_vc15\build\include \
 
 #==================
 
@@ -161,15 +160,15 @@ LIBS += -LC:\libs\pyclustering\pyclustering-master\pyclustering\core\64-bit\win 
 
 # OpenCV
 
-# opencv-4.2.0-vc14_vc15
-LIBS += -LC:\libs\opencv\openCV_MSVC\build\x64\vc15\lib \
-                 -lopencv_world420
-#                 -lopencv_world420d
+## opencv-4.2.0-vc14_vc15
+#LIBS += -LC:\libs\opencv\openCV_MSVC\build\x64\vc15\lib \
+#                 -lopencv_world420
+##                 -lopencv_world420d
 
-# opencv-4.6.0-vc14_vc15
-#LIBS += -LC:\libs\opencv\opencv-4.6.0-vc14_vc15\build\x64\vc15\lib \
-#                -lopencv_world460
-#                 -lopencv_world460d
+# opencv-4.8.0-vc14_vc15
+LIBS += -LC:\libs\opencv\opencv-4.8.0-vc14_vc15\build\x64\vc16\lib \
+                -lopencv_world480
+#                 -lopencv_world468d
 
 
 

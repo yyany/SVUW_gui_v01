@@ -158,12 +158,25 @@ MainWindow::MainWindow(QWidget *parent)
     cl_VideoStreamer* objp_VideoStreamer =  new cl_VideoStreamer;
 
 
+
+
+    //===================================
+    // Инициализация нейронной сети для распознания объектов на изображении
+    //===================================
+    const std::string model_path = "./files/nn/yolov5s.onnx";
+    const std::string classes_path = "./files/nn/darknet.names";
+    ADS::NeuralNetDetector * detector = new ADS::NeuralNetDetector(model_path, classes_path, 640, 640);
+
+
+
     // =================================
     // Занесение ссылок на используемые объекты классов в общие данные settings_ptr
     // =================================
-    settings_ptr->Objs_ptr.objp_VideoStreamer = objp_VideoStreamer;
     settings_ptr->Objs_ptr.obj_ptr = obj_ptr;
     settings_ptr->Objs_ptr.vuxyzrgb_copy = vuxyzrgb_copy;
+    settings_ptr->Objs_ptr.objp_VideoStreamer = objp_VideoStreamer;
+    settings_ptr->Objs_ptr.NeuralNetDetector = detector;
+
 
     //    settings_ptr->Objs_ptr.objTcpServer_ptr = objTcpServer_ptr;
     //    settings_ptr->Objs_ptr.objTcpClient_ptr = objTcpClient_ptr;
@@ -1608,16 +1621,8 @@ void MainWindow::showImg_Cycle()
 
 
 
-         std::vector <std::string> textDarkNet = settings_ptr->DarkNet.replyAll;
-
-
-        for (int q = 1; q < textDarkNet.size() ; q++)
-        {
-            textDarkNet.at(0) += textDarkNet.at(q);
-        }
-
-
-        ui->textEdit_DarkNet_Reply2->setText( QString::fromStdString(textDarkNet.at(0)) );
+         std::string textDarkNet = settings_ptr->DarkNet.replyAll;
+         ui->textEdit_DarkNet_Reply2->setText( QString::fromStdString(textDarkNet) );
 
 
         // перенести в слоты чтоб изменялось не постоянно а только при изменении
@@ -6206,7 +6211,7 @@ void MainWindow::on_pushButton_DarkNet_clicked()
         // ======================
         // Установка галочек доп. потоков
         // ======================
-        settings_ptr->Algorithm_inThread_seq.at(7) = {175, 75};
+        settings_ptr->Algorithm_inThread_seq.at(7) = {175, 75, 975};
 
 
         ui->checkBox_07->setChecked(true);
