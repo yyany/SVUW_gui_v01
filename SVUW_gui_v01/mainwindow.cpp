@@ -163,8 +163,8 @@ MainWindow::MainWindow(QWidget *parent)
     //===================================
     // Инициализация нейронной сети для распознания объектов на изображении
     //===================================
-    const std::string model_path = "./files/nn/yolov5s.onnx";
-    const std::string classes_path = "./files/nn/darknet.names";
+    const std::string model_path = settings_ptr->DarkNet.model_path;
+    const std::string classes_path = settings_ptr->DarkNet.classes_path;
     ADS::NeuralNetDetector * detector = new ADS::NeuralNetDetector(model_path, classes_path, 640, 640);
 
 
@@ -175,7 +175,7 @@ MainWindow::MainWindow(QWidget *parent)
     settings_ptr->Objs_ptr.obj_ptr = obj_ptr;
     settings_ptr->Objs_ptr.vuxyzrgb_copy = vuxyzrgb_copy;
     settings_ptr->Objs_ptr.objp_VideoStreamer = objp_VideoStreamer;
-    settings_ptr->Objs_ptr.NeuralNetDetector = detector;
+    settings_ptr->Objs_ptr.DarkNetDetector = detector;
 
 
     //    settings_ptr->Objs_ptr.objTcpServer_ptr = objTcpServer_ptr;
@@ -1165,6 +1165,8 @@ void MainWindow::showImg_Cycle()
 
     // 50 - визуализация 3D точек
 
+    // 70 - результаты работы нейронной сети (изображение с рамками)
+
 
     QGraphicsPixmapItem pixmap;
     int idx = 1; // пояснение выше
@@ -1261,17 +1263,22 @@ void MainWindow::showImg_Cycle()
             break;
 
         case 10:
+        {
             selectorImage = 14;
-            frame =  getImg02(obj_ptr, settings_ptr, idx, selectorImage);
+            cv::Mat tempImg =  getImg02(obj_ptr, settings_ptr, idx, selectorImage);
+            cvtColor(tempImg, frame, cv::COLOR_GRAY2RGB);
             break;
+        }
 
         case 11:
-            selectorImage = 10;
+            // getImgRemapGrayPreProc_StereoPair() вывод чего-то
+            selectorImage = 70;
             frame =  getImg02(obj_ptr, settings_ptr, idx, selectorImage);
             break;
 
+
         case 12:
-            selectorImage = 10;
+            selectorImage = 1000;
             frame =  getImg02(obj_ptr, settings_ptr, idx, selectorImage);
             break;
 

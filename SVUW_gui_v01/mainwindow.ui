@@ -1528,7 +1528,12 @@ QComboBox:pressed {
               </item>
               <item>
                <property name="text">
-                <string>10 Тест</string>
+                <string>10 Стереопара  (после предобработки) [Gray]</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>11 DarkNetDetector</string>
                </property>
               </item>
              </widget>
@@ -3090,7 +3095,7 @@ QComboBox:pressed {
             </item>
             <item row="16" column="0">
              <layout class="QGridLayout" name="gridLayout_17">
-              <item row="1" column="4">
+              <item row="1" column="6">
                <widget class="QPushButton" name="pushButton_RulerStart">
                 <property name="minimumSize">
                  <size>
@@ -3126,7 +3131,7 @@ QPushButton:pressed {
                 </property>
                </widget>
               </item>
-              <item row="1" column="5">
+              <item row="1" column="7">
                <widget class="QPushButton" name="pushButton_Start3DRuler">
                 <property name="minimumSize">
                  <size>
@@ -3157,43 +3162,7 @@ QPushButton:pressed {
                 </property>
                </widget>
               </item>
-              <item row="1" column="2">
-               <widget class="QPushButton" name="pushButton_ResultVideoStream">
-                <property name="minimumSize">
-                 <size>
-                  <width>60</width>
-                  <height>60</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="font">
-                 <font>
-                  <pointsize>10</pointsize>
-                  <bold>true</bold>
-                 </font>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">QPushButton {
-  background-color: rgb(48, 172, 119);
-  color:black;
-  border: 1px solid gray;
-}
-QPushButton:pressed {
-    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                      stop: 0 #BEBEBE, stop: 1 #D7D7D7);
-}</string>
-                </property>
-                <property name="text">
-                 <string>Video Stream</string>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="3">
+              <item row="1" column="5">
                <widget class="QPushButton" name="pushButton_DarkNet">
                 <property name="minimumSize">
                  <size>
@@ -3226,6 +3195,78 @@ QPushButton:pressed {
                 </property>
                 <property name="text">
                  <string>DarkNet</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="3">
+               <widget class="QPushButton" name="pushButton_OutImgWindow">
+                <property name="minimumSize">
+                 <size>
+                  <width>60</width>
+                  <height>60</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>10</pointsize>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+  background-color: rgb(255, 255, 0);
+  color:black;
+  border: 1px solid gray;
+}
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #BEBEBE, stop: 1 #D7D7D7);
+}</string>
+                </property>
+                <property name="text">
+                 <string>Img Window</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="4">
+               <widget class="QPushButton" name="pushButton_ResultVideoStream">
+                <property name="minimumSize">
+                 <size>
+                  <width>60</width>
+                  <height>60</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>10</pointsize>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+  background-color: rgb(48, 172, 119);
+  color:black;
+  border: 1px solid gray;
+}
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #BEBEBE, stop: 1 #D7D7D7);
+}</string>
+                </property>
+                <property name="text">
+                 <string>Video Stream</string>
                 </property>
                </widget>
               </item>

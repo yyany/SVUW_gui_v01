@@ -414,9 +414,7 @@ private:
     float inference_time;
     /** Получить строковые значения классов */
     errno_t read_classes(const std::string file_path);
-    /** Инициализация нейросети */
-    errno_t init_network(const std::string model_path,
-                         const std::string classes_path);
+
     /** Отрисовка метки */
     void draw_label(cv::Mat& img, std::string label, int left, int top);
     /** Предобработка результатов */
@@ -428,6 +426,9 @@ public:
     NeuralNetDetector(const std::string model, const std::string classes);
     NeuralNetDetector(const std::string model, const std::string classes,
                       int width, int height);
+    /** Инициализация нейросети */
+    errno_t init_network(const std::string model_path,
+                         const std::string classes_path);
     std::vector<float> get_confidences(void) { return confidences_set; }
     std::vector<cv::Rect> get_boxes(void) { return boxes_set; }
     std::vector<int> get_class_ids(void) { return classes_id_set; }

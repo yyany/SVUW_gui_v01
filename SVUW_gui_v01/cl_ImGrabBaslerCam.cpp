@@ -1539,7 +1539,7 @@ void Basler::cl_ImGrabBaslerCam::openIPcam()
 
 
         cout << "IPCam: vcap01  " << endl;
-        if(!vcap01.open( (const cv::String)  videoStreamAddressLeft, cv::CAP_ANY ) )
+        if(!vcap01.open(  videoStreamAddressLeft, cv::CAP_ANY ) )
             std::cout << "Error opening Cam 01" << std::endl;
 
 
@@ -1556,7 +1556,7 @@ void Basler::cl_ImGrabBaslerCam::openIPcam()
 
 
         cout << "IPCam: vcap02  " << endl;
-        if(!vcap02.open( (const cv::String) videoStreamAddressRight, cv::CAP_ANY ))
+        if(!vcap02.open(  videoStreamAddressRight, cv::CAP_ANY ))
             std::cout << "Error opening Cam 02" << std::endl;
 
 

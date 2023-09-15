@@ -238,7 +238,7 @@ void threadFuncCommon(ADS::cl_DenseStereo& obj,
      //  DarkNet-test-simple (declaration)
      //===================================
 
-     ADS::NeuralNetDetector * detector = settings.Objs_ptr.NeuralNetDetector;
+     ADS::NeuralNetDetector * detector = settings.Objs_ptr.DarkNetDetector;
 
 
 
@@ -435,9 +435,9 @@ void threadFuncCommon(ADS::cl_DenseStereo& obj,
 
             {
 
-                // Запуст окна для вывода результатов
-                cv::namedWindow("Window_img", cv::WINDOW_AUTOSIZE); // Создаем  окна
-                cv::waitKey(10);
+//                // Запуст окна для вывода результатов
+//                cv::namedWindow("Window_img", cv::WINDOW_AUTOSIZE); // Создаем  окна
+//                cv::waitKey(10);
 
 
             }
@@ -1000,15 +1000,15 @@ void threadFuncCommon(ADS::cl_DenseStereo& obj,
 
 
 
-                //=========================================
-                // Вывод в окно OpenCV
-                //=========================================
+//                //=========================================
+//                // Вывод в окно OpenCV
+//                //=========================================
 
 
-                // Запуст окна для вывода результатов
-                // cv::namedWindow("Window_img", cv::WINDOW_AUTOSIZE); // Создаем  окна
-                cv::imshow("Window_img", replyImg);
-                cv::waitKey(10);
+//                // Запуст окна для вывода результатов
+//                // cv::namedWindow("Window_img", cv::WINDOW_AUTOSIZE); // Создаем  окна
+//                cv::imshow("Window_img", replyImg);
+//                cv::waitKey(10);
 
 
 
@@ -1454,7 +1454,7 @@ cv::Mat  getImg02(ADS::cl_DenseStereo* obj_ptr, str_Settings *settings_ptr, int 
 
     // 50 - визуализация 3D точек
 
-
+    // 70 - результаты работы нейронной сети (изображение с рамками)
 
 
     // =====================================
@@ -1567,6 +1567,10 @@ cv::Mat  getImg02(ADS::cl_DenseStereo* obj_ptr, str_Settings *settings_ptr, int 
 
         case 50:
             m = obj_ptr->getImg3Dpoins();
+            break;
+
+        case 70:
+            m = settings_ptr->Objs_ptr.DarkNetDetector->get_image();
             break;
 
 
@@ -3351,12 +3355,26 @@ void  InitializeSettings(str_Settings* settings_ptr)
     settings_ptr->SerialPort.value = 30;      // передаваемое значение
     settings_ptr->SerialPort.COMport = "COM3";   // номер компорта
 
+
+
+
+
+    // =============================================
+    // Нейронная сеть DarkNet
+    // =============================================
+    settings_ptr->DarkNet.model_path = "./files/nn/pipe.onnx";
+    settings_ptr->DarkNet.classes_path = "./files/nn/pipe.names";
+
+
+
+
+
 // =============================================
     // =============================================
     // Чтение некоторых параметров из файла Config
     // ============================================
 // =============================================
-    cout<<" func_main.cpp:InitializeSettings: READ FILES ..." <<endl;
+    cout <<" func_main.cpp:InitializeSettings: READ FILES ..." <<endl;
 
 
     cv::FileStorage fs(settings_ptr->Config_filename, cv::FileStorage::READ);
@@ -3498,6 +3516,16 @@ void  InitializeSettings(str_Settings* settings_ptr)
         // Серийные номера устройств (камер) HikRobot по 2-ому списку
         // =============================
         fs["CamSN"] >> settings_ptr->CamSN;
+
+
+        // =============================================
+        // Нейронная сеть DarkNet
+        // =============================================
+        fs["DarkNet_model_path"] >> settings_ptr->DarkNet.model_path;
+        fs["DarkNet_classes_path"] >> settings_ptr->DarkNet.classes_path;
+
+
+
 
 
         //         minimum number of shared neighbors that is required for establish links between points.

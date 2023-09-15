@@ -212,8 +212,9 @@ public:
     QGridLayout *gridLayout_17;
     QPushButton *pushButton_RulerStart;
     QPushButton *pushButton_Start3DRuler;
-    QPushButton *pushButton_ResultVideoStream;
     QPushButton *pushButton_DarkNet;
+    QPushButton *pushButton_OutImgWindow;
+    QPushButton *pushButton_ResultVideoStream;
     QWidget *tab_Add;
     QGridLayout *gridLayout_11;
     QLabel *label_5;
@@ -984,6 +985,7 @@ public:
         comboBoxMain_ImgType->addItem(QString());
         comboBoxMain_ImgType->addItem(QString());
         comboBoxMain_ImgType->addItem(QString());
+        comboBoxMain_ImgType->addItem(QString());
         comboBoxMain_ImgType->setObjectName(QString::fromUtf8("comboBoxMain_ImgType"));
         sizePolicy1.setHeightForWidth(comboBoxMain_ImgType->sizePolicy().hasHeightForWidth());
         comboBoxMain_ImgType->setSizePolicy(sizePolicy1);
@@ -1681,7 +1683,7 @@ public:
 "                                      stop: 0 #BEBEBE, stop: 1 #D7D7D7);\n"
 "}"));
 
-        gridLayout_17->addWidget(pushButton_RulerStart, 1, 4, 1, 1);
+        gridLayout_17->addWidget(pushButton_RulerStart, 1, 6, 1, 1);
 
         pushButton_Start3DRuler = new QPushButton(tab_Main);
         pushButton_Start3DRuler->setObjectName(QString::fromUtf8("pushButton_Start3DRuler"));
@@ -1698,24 +1700,7 @@ public:
 "                                      stop: 0 #FF7832, stop: 1 #FF9739);\n"
 "}"));
 
-        gridLayout_17->addWidget(pushButton_Start3DRuler, 1, 5, 1, 1);
-
-        pushButton_ResultVideoStream = new QPushButton(tab_Main);
-        pushButton_ResultVideoStream->setObjectName(QString::fromUtf8("pushButton_ResultVideoStream"));
-        pushButton_ResultVideoStream->setMinimumSize(QSize(60, 60));
-        pushButton_ResultVideoStream->setMaximumSize(QSize(16777215, 16777215));
-        pushButton_ResultVideoStream->setFont(font8);
-        pushButton_ResultVideoStream->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"  background-color: rgb(48, 172, 119);\n"
-"  color:black;\n"
-"  border: 1px solid gray;\n"
-"}\n"
-"QPushButton:pressed {\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #BEBEBE, stop: 1 #D7D7D7);\n"
-"}"));
-
-        gridLayout_17->addWidget(pushButton_ResultVideoStream, 1, 2, 1, 1);
+        gridLayout_17->addWidget(pushButton_Start3DRuler, 1, 7, 1, 1);
 
         pushButton_DarkNet = new QPushButton(tab_Main);
         pushButton_DarkNet->setObjectName(QString::fromUtf8("pushButton_DarkNet"));
@@ -1732,7 +1717,41 @@ public:
 "                                      stop: 0 #BEBEBE, stop: 1 #D7D7D7);\n"
 "}"));
 
-        gridLayout_17->addWidget(pushButton_DarkNet, 1, 3, 1, 1);
+        gridLayout_17->addWidget(pushButton_DarkNet, 1, 5, 1, 1);
+
+        pushButton_OutImgWindow = new QPushButton(tab_Main);
+        pushButton_OutImgWindow->setObjectName(QString::fromUtf8("pushButton_OutImgWindow"));
+        pushButton_OutImgWindow->setMinimumSize(QSize(60, 60));
+        pushButton_OutImgWindow->setMaximumSize(QSize(16777215, 16777215));
+        pushButton_OutImgWindow->setFont(font8);
+        pushButton_OutImgWindow->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"  background-color: rgb(255, 255, 0);\n"
+"  color:black;\n"
+"  border: 1px solid gray;\n"
+"}\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #BEBEBE, stop: 1 #D7D7D7);\n"
+"}"));
+
+        gridLayout_17->addWidget(pushButton_OutImgWindow, 1, 3, 1, 1);
+
+        pushButton_ResultVideoStream = new QPushButton(tab_Main);
+        pushButton_ResultVideoStream->setObjectName(QString::fromUtf8("pushButton_ResultVideoStream"));
+        pushButton_ResultVideoStream->setMinimumSize(QSize(60, 60));
+        pushButton_ResultVideoStream->setMaximumSize(QSize(16777215, 16777215));
+        pushButton_ResultVideoStream->setFont(font8);
+        pushButton_ResultVideoStream->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"  background-color: rgb(48, 172, 119);\n"
+"  color:black;\n"
+"  border: 1px solid gray;\n"
+"}\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #BEBEBE, stop: 1 #D7D7D7);\n"
+"}"));
+
+        gridLayout_17->addWidget(pushButton_ResultVideoStream, 1, 4, 1, 1);
 
 
         gridLayout_8->addLayout(gridLayout_17, 16, 0, 1, 1);
@@ -2298,7 +2317,8 @@ public:
         comboBoxMain_ImgType->setItemText(7, QCoreApplication::translate("MainWindow", "7 3D \321\202\320\276\321\207\320\272\320\270 + \320\262\321\200\320\260\321\211\320\265\320\275\320\270\320\265", nullptr));
         comboBoxMain_ImgType->setItemText(8, QCoreApplication::translate("MainWindow", "8 \320\241\321\202\320\265\321\200\320\265\320\276\320\277\320\260\321\200\320\260  (\320\277\320\276\321\201\320\273\320\265 \321\200\320\265\320\272\321\202\320\270\321\204\320\270\320\272\320\260\321\206\320\270\320\270)", nullptr));
         comboBoxMain_ImgType->setItemText(9, QCoreApplication::translate("MainWindow", "9 \320\241\321\202\320\265\321\200\320\265\320\276\320\277\320\260\321\200\320\260  (\320\277\320\276\321\201\320\273\320\265 \320\277\321\200\320\265\320\264\320\276\320\261\321\200\320\260\320\261\320\276\321\202\320\272\320\270)", nullptr));
-        comboBoxMain_ImgType->setItemText(10, QCoreApplication::translate("MainWindow", "10 \320\242\320\265\321\201\321\202", nullptr));
+        comboBoxMain_ImgType->setItemText(10, QCoreApplication::translate("MainWindow", "10 \320\241\321\202\320\265\321\200\320\265\320\276\320\277\320\260\321\200\320\260  (\320\277\320\276\321\201\320\273\320\265 \320\277\321\200\320\265\320\264\320\276\320\261\321\200\320\260\320\261\320\276\321\202\320\272\320\270) [Gray]", nullptr));
+        comboBoxMain_ImgType->setItemText(11, QCoreApplication::translate("MainWindow", "11 DarkNetDetector", nullptr));
 
         checkBox_setWarterCalibr->setText(QCoreApplication::translate("MainWindow", "\320\222\320\276\320\264\320\260", nullptr));
         pushButton_OpenCalibr->setText(QCoreApplication::translate("MainWindow", "   \320\222\321\213\320\261\321\200\320\260\321\202\321\214   ", nullptr));
@@ -2379,8 +2399,9 @@ public:
         label->setText(QCoreApplication::translate("MainWindow", "\320\230\321\201\321\202\320\276\321\207\320\275\320\270\320\272 \320\270\320\267\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\271", nullptr));
         pushButton_RulerStart->setText(QCoreApplication::translate("MainWindow", "Ruler", nullptr));
         pushButton_Start3DRuler->setText(QCoreApplication::translate("MainWindow", "Ruler 3D", nullptr));
-        pushButton_ResultVideoStream->setText(QCoreApplication::translate("MainWindow", "Video Stream", nullptr));
         pushButton_DarkNet->setText(QCoreApplication::translate("MainWindow", "DarkNet", nullptr));
+        pushButton_OutImgWindow->setText(QCoreApplication::translate("MainWindow", "Img Window", nullptr));
+        pushButton_ResultVideoStream->setText(QCoreApplication::translate("MainWindow", "Video Stream", nullptr));
         tabWidget_ProgSettings->setTabText(tabWidget_ProgSettings->indexOf(tab_Main), QCoreApplication::translate("MainWindow", "Initial Settings", nullptr));
         label_5->setText(QCoreApplication::translate("MainWindow", "\320\227\320\260\320\277\320\270\321\201\321\214", nullptr));
         checkBox_WriteResultVideo->setText(QCoreApplication::translate("MainWindow", "\320\267\320\260\320\277\320\270\321\201\321\214 \321\200\320\265\320\267\321\203\320\273\321\214\321\202\320\260\321\202\320\276\320\262 \320\276\320\261\321\200\320\260\320\261\320\276\321\202\320\272\320\270", nullptr));
