@@ -408,6 +408,57 @@ void f02_Ruler::mousePressEvent(QMouseEvent *event)
 
 }
 
+
+void f02_Ruler::wheelEvent(QWheelEvent *event)
+{
+//    if (event->modifiers() & Qt::ControlModifier)
+//    {
+//        // zoom
+//        const QGraphicsView::ViewportAnchor anchor = ui->graphicsView_RulerFame->transformationAnchor();
+//        ui->graphicsView_RulerFame->setTransformationAnchor(QGraphicsView::AnchorUnderMouse);
+//        int angle = event->angleDelta().y();
+//        qreal factor;
+//        if (angle > 0)
+//        {
+//            factor = 1.1;
+//        }
+//        else
+//        {
+//            factor = 0.9;
+//        }
+//        ui->graphicsView_RulerFame->scale(factor, factor);
+//        ui->graphicsView_RulerFame->setTransformationAnchor(anchor);
+
+
+//    }
+//    else
+//    {
+//        wheelEvent(event);
+//    }
+
+// =====================
+// Без if
+// =====================
+
+    // zoom
+    const QGraphicsView::ViewportAnchor anchor = ui->graphicsView_RulerFame->transformationAnchor();
+    ui->graphicsView_RulerFame->setTransformationAnchor(QGraphicsView::AnchorUnderMouse);
+    int angle = event->angleDelta().y();
+    qreal factor;
+    if (angle > 0)
+    {
+        factor = 1.1;
+    }
+    else
+    {
+        factor = 0.9;
+    }
+    ui->graphicsView_RulerFame->scale(factor, factor);
+    ui->graphicsView_RulerFame->setTransformationAnchor(anchor);
+
+}
+
+
 void f02_Ruler::on_pushButton_Reload_clicked()
 {
     f02_Ruler::slot_StartRuler();

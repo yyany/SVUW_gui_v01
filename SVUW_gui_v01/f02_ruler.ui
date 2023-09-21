@@ -18,8 +18,24 @@
     <layout class="QGridLayout" name="gridLayout_2">
      <item row="0" column="0" colspan="2">
       <layout class="QGridLayout" name="gridLayout">
+       <property name="sizeConstraint">
+        <enum>QLayout::SetMinimumSize</enum>
+       </property>
        <item row="0" column="0">
-        <widget class="QGraphicsView" name="graphicsView_RulerFame"/>
+        <widget class="QGraphicsView" name="graphicsView_RulerFame">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="dragMode">
+          <enum>QGraphicsView::NoDrag</enum>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>

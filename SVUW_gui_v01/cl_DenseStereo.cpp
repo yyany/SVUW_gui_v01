@@ -728,7 +728,27 @@ vector<cv::Mat> ADS::cl_DenseStereo::ImgPerProcessing_OneImg(cv::Mat img_temp, v
             break;
         }
 
+        case 5:
+        {
+            if (!flag_gray)
+            {
+                // Convert the rectified images to grayscale images
+                cv::cvtColor(img_temp, gray_temp,  cv::COLOR_BGR2GRAY);
+                flag_gray = true;
+            }
+            // ===========
+            // Фильтр повышения резкости
+            // ===========
+            // sharpen image using "unsharp mask" algorithm
 
+//            Mat blurred; double sigma = 1, threshold = 5, amount = 1;
+//            GaussianBlur(my_img, blurred, Size(), sigma, sigma);
+//            Mat lowContrastMask = abs(my_img - blurred) < threshold;
+//            Mat sharpened = my_img*(1+amount) + blurred*(-amount);
+//            my_img.copyTo(sharpened, lowContrastMask);
+
+            break;
+        }
         // default:
 
 
@@ -2029,7 +2049,7 @@ void ADS::cl_DenseStereo::AddResultsToDisparityMap03()
 
 
 
-    cv::Mat imgLeft_temp = getResultImage();
+    cv::Mat imgLeft_temp = getImgColorPreProcess_StereoPair().at(0);
     if (imgLeft_temp.empty()) return;
 
 
@@ -2193,8 +2213,8 @@ void ADS::cl_DenseStereo::AddResultsToDisparityMap03()
         // прорисовка 1-го клика мыши
         cv::circle	(imgLeft_temp,
                    {Mouse01[0],Mouse01[1]},  // coordinate
-                   3,  //radius
-                   {200,200,255},     // color
+                   5,  //radius
+                   {100,0,0},     // color
                    3,       // thickness,
                    cv::LINE_8);    // lineType = //cv::LINE_4 //cv::LINE_8 //cv::LINE_AA
 
@@ -2276,7 +2296,7 @@ void ADS::cl_DenseStereo::AddResultsToDisparityMap03()
                  {Mouse01[0], Mouse01[1]},
                  {Mouse02[0], Mouse02[1]},
                  {0,0,0},
-                 2,               // thickness,
+                 3,               // thickness,
                  cv::LINE_8,    // lineType = //cv::LINE_4 //cv::LINE_8 //cv::LINE_AA
                  false);       // bottomLeftOrigin
 

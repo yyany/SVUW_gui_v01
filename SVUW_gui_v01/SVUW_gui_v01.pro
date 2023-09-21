@@ -8,7 +8,9 @@ QT       += core network # для работы с сетевыми каласс�
 QT       += serialport    # для предачи данных на Arduino через COM port
 QT       += testlib       # для подключения #include <QTest>
 QT       += multimedia    # для камер
-QT       += datavisualization # для визуализации
+QT       += datavisualization # для визуализации (Альчаков)
+QT       += widgets
+
 
 # Qt Test - это платформа для модульного тестирования приложений и библиотек на основе Qt.
 
@@ -89,7 +91,8 @@ FORMS += \
 #==================
 
 # OpenCV
-# opencv-4.2.0-vc14_vc15
+
+## opencv-4.2.0-vc14_vc15
 #INCLUDEPATH += \
 #                C:\libs\opencv\openCV_MSVC\build\include \
 
@@ -168,7 +171,7 @@ LIBS += -LC:\libs\pyclustering\pyclustering-master\pyclustering\core\64-bit\win 
 # opencv-4.8.0-vc14_vc15
 LIBS += -LC:\libs\opencv\opencv-4.8.0-vc14_vc15\build\x64\vc16\lib \
                 -lopencv_world480
-#                 -lopencv_world468d
+#                 -lopencv_world480d
 
 
 

@@ -553,12 +553,27 @@ void threadFuncCommon(ADS::cl_DenseStereo& obj,
 
             case 15:
                 // 2 - захват кадра с IP камер
-                obj.CaptureFromIP_SingleCam(0, true, false);
+                obj.CaptureFromIP_SingleCam(0, false, false);
                 break;
             case 16:
                 // 2 - захват кадра с IP камер
+                obj.CaptureFromIP_SingleCam(1, false, false);
+                break;
+
+
+
+            case 1511:
+                // 2 - захват кадра с IP камер
+                obj.CaptureFromIP_SingleCam(0, true, false);
+                break;
+            case 1611:
+                // 2 - захват кадра с IP камер
                 obj.CaptureFromIP_SingleCam(1, true, false);
                 break;
+
+
+
+
 
             case 17:
             {
@@ -2729,6 +2744,8 @@ void threadFunc018(ADS::cl_DenseStereo& obj,
 
         int codec = cv::VideoWriter::fourcc('H', 'F', 'Y', 'U');
 
+//        int codec = cv::VideoWriter::fourcc('M','J','P','G');
+
 // ================
 // Only Windows END
 // ================
@@ -2750,12 +2767,14 @@ void threadFunc018(ADS::cl_DenseStereo& obj,
 
 
 
-            double fps = 25;
+            double fps = 25.0;
 
             //        video_01.open(videoFileName_01.str(), codec, fps, frameSize,1);
             //        video_02.open(videoFileName_02.str(), codec, fps, frameSize,1);
-            video_01.open(videoFileName_01.str(), codec, fps, frameSize,1);
-            video_02.open(videoFileName_02.str(), codec, fps, frameSize,1);
+                    video_01.open(videoFileName_01.str(), codec, fps, frameSize,1);
+                    video_02.open(videoFileName_02.str(), codec, fps, frameSize,1);
+
+
             if ( !video_01.isOpened() || !video_02.isOpened() )
             {
                 cerr << "threadFunc018: Could not open the output video file for write\n";

@@ -43,8 +43,16 @@ public:
         gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
         gridLayout = new QGridLayout();
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
+        gridLayout->setSizeConstraint(QLayout::SetMinimumSize);
         graphicsView_RulerFame = new QGraphicsView(f02_Ruler);
         graphicsView_RulerFame->setObjectName(QString::fromUtf8("graphicsView_RulerFame"));
+        QSizePolicy sizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::MinimumExpanding);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(graphicsView_RulerFame->sizePolicy().hasHeightForWidth());
+        graphicsView_RulerFame->setSizePolicy(sizePolicy);
+        graphicsView_RulerFame->setAlignment(Qt::AlignCenter);
+        graphicsView_RulerFame->setDragMode(QGraphicsView::NoDrag);
 
         gridLayout->addWidget(graphicsView_RulerFame, 0, 0, 1, 1);
 
@@ -88,11 +96,11 @@ public:
         tableWidget_RulerPoints->setItem(1, 3, __qtablewidgetitem14);
         tableWidget_RulerPoints->setObjectName(QString::fromUtf8("tableWidget_RulerPoints"));
         tableWidget_RulerPoints->setEnabled(true);
-        QSizePolicy sizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
-        sizePolicy.setHorizontalStretch(0);
-        sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(tableWidget_RulerPoints->sizePolicy().hasHeightForWidth());
-        tableWidget_RulerPoints->setSizePolicy(sizePolicy);
+        QSizePolicy sizePolicy1(QSizePolicy::Minimum, QSizePolicy::Minimum);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(tableWidget_RulerPoints->sizePolicy().hasHeightForWidth());
+        tableWidget_RulerPoints->setSizePolicy(sizePolicy1);
         tableWidget_RulerPoints->setMinimumSize(QSize(0, 0));
         tableWidget_RulerPoints->setMaximumSize(QSize(400, 90));
         tableWidget_RulerPoints->setAutoFillBackground(false);

@@ -1743,6 +1743,9 @@ void Basler::cl_ImGrabBaslerCam::CaptureFromIP_SingleCam(unsigned int CamIndex, 
 
     // ================
 
+    // flag_AlternateGrabCam - флаг для попеременного взятия изображений с камер
+
+
     if( flag_AlternateGrabCam ) if (!(flag_CurrentIPCam == CamIndex) ) return;
 
     switch (CamIndex)

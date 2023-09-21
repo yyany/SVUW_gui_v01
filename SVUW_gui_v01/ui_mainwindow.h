@@ -2124,7 +2124,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget_ProgParam->setCurrentIndex(0);
+        tabWidget_ProgParam->setCurrentIndex(4);
         tabWidget_ProgSettings->setCurrentIndex(0);
         comboBoxMain_ModeWork->setCurrentIndex(0);
         comboBoxMain_ImgType->setCurrentIndex(0);

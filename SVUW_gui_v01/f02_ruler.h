@@ -4,6 +4,7 @@
 // #include <QDockWidget>
 #include <QWidget>
 
+#include <QGraphicsView>
 #include <QTime>
 #include <QDateTime>
 #include <vector>
@@ -69,8 +70,9 @@ public:
 private slots:
     void on_pushButton_Stop_clicked();
 
-
-    void mousePressEvent(QMouseEvent *event);
+    // Обработчики
+    void wheelEvent(QWheelEvent *event); // Обработчик колёсика мыши
+    void mousePressEvent(QMouseEvent *event);  // Обработчик клика мыши
 
 
 
