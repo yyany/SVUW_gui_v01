@@ -472,6 +472,7 @@ public:
         comboBox_ImagePreProcessing->addItem(QString());
         comboBox_ImagePreProcessing->addItem(QString());
         comboBox_ImagePreProcessing->addItem(QString());
+        comboBox_ImagePreProcessing->addItem(QString());
         comboBox_ImagePreProcessing->setObjectName(QString::fromUtf8("comboBox_ImagePreProcessing"));
 
         gridLayout_central->addWidget(comboBox_ImagePreProcessing, 8, 0, 1, 1);
@@ -1172,6 +1173,7 @@ public:
         comboBox_ImagePreProcessing->setItemText(3, QCoreApplication::translate("form01_mainSettings", "CLAHE", nullptr));
         comboBox_ImagePreProcessing->setItemText(4, QCoreApplication::translate("form01_mainSettings", "equalizeHist", nullptr));
         comboBox_ImagePreProcessing->setItemText(5, QCoreApplication::translate("form01_mainSettings", "CLAHE + equalizeHist", nullptr));
+        comboBox_ImagePreProcessing->setItemText(6, QCoreApplication::translate("form01_mainSettings", "CLAHE (\321\207\320\265\321\200\320\265\320\267 Lab)", nullptr));
 
         label_Y_Low->setText(QCoreApplication::translate("form01_mainSettings", " Y_Low", nullptr));
         label_Z_Low->setText(QCoreApplication::translate("form01_mainSettings", " Z_Low", nullptr));

@@ -749,6 +749,65 @@ vector<cv::Mat> ADS::cl_DenseStereo::ImgPerProcessing_OneImg(cv::Mat img_temp, v
 
             break;
         }
+
+
+        case 6:
+        {
+
+            // ===========
+            // CLAHE (через Color Lab) цветного изображения
+            // ============
+
+
+            cv::Ptr <cv::CLAHE> clahe = cv::createCLAHE(40,cv::Size(8, 8));
+
+            cv::Mat img_lab;
+
+            cvtColor(img_temp, img_lab, COLOR_BGR2Lab);
+
+            //  Разделяем изображение на 3 канала (B, G и R)
+            vector<Mat> lab_planes;
+
+            split( img_lab, lab_planes );
+
+            lab_planes[0] = lab_planes[0] * 0.01;
+
+            // Применяем выравнивание к гистограммам всех каналов
+            clahe->apply(lab_planes[0], lab_planes[0]);
+
+            lab_planes[0] = lab_planes[0] * 100;
+
+            // Объединяем выровненные каналы в выровненное цветное изображение
+            merge(lab_planes, img_lab );
+
+
+             cvtColor(img_lab, img_temp, COLOR_Lab2BGR);
+
+            flag_gray = false;  // Если false  то будет проведено перевод в серое cv::cvtColor(img_temp, gray_temp,  cv::COLOR_BGR2GRAY);
+
+
+
+            cv::putText	(img_temp,
+                        "CLAHE (через Color Lab)",
+                        //                    {int(coef_size * 50), HR_Img_.rows - int(coef_size * 150)},
+                        {50, 150},
+                        cv::FONT_HERSHEY_SIMPLEX ,              // int 	fontFace
+                        2.0,              //double 	fontScale
+                        cv::Scalar(47, 20, 162),
+                        5.0,               // thickness,
+                        cv::LINE_8,    // lineType = //cv::LINE_4 //cv::LINE_8 //cv::LINE_AA
+                        false);
+
+
+
+
+            break;
+        }
+
+
+
+
+
         // default:
 
 
@@ -862,21 +921,23 @@ void ADS::cl_DenseStereo::ImgPerProcessing(vector<int> metod_ImagePerProcessing)
             // ============
             // 01
             // Разделяем изображение на 3 канала (B, G и R)
-            vector<Mat> bgr_planes;
+            vector<Mat> bgr_planes(3);
+            cv::Mat dst;
+
             split( img01Remap_temp, bgr_planes );
             // Применяем выравнивание к гистограммам всех каналов
-            equalizeHist(bgr_planes[0], bgr_planes[0]);
-            equalizeHist(bgr_planes[1], bgr_planes[1]);
-            equalizeHist(bgr_planes[2], bgr_planes[2]);
+            equalizeHist(bgr_planes[0], dst);  dst.copyTo(bgr_planes[0]);
+            equalizeHist(bgr_planes[1], dst);  dst.copyTo(bgr_planes[1]);
+            equalizeHist(bgr_planes[2], dst);  dst.copyTo(bgr_planes[2]);
             // Объединяем выровненные каналы в выровненное цветное изображение
             merge(bgr_planes, img01Remap_temp );
 
             // 02
             split( img02Remap_temp, bgr_planes );
             // Применяем выравнивание к гистограммам всех каналов
-            equalizeHist(bgr_planes[0], bgr_planes[0]);
-            equalizeHist(bgr_planes[1], bgr_planes[1]);
-            equalizeHist(bgr_planes[2], bgr_planes[2]);
+            equalizeHist(bgr_planes[0], dst);  dst.copyTo(bgr_planes[0]);
+            equalizeHist(bgr_planes[1], dst);  dst.copyTo(bgr_planes[1]);
+            equalizeHist(bgr_planes[2], dst);  dst.copyTo(bgr_planes[2]);
             // Объединяем выровненные каналы в выровненное цветное изображение
             merge(bgr_planes, img02Remap_temp );
 
@@ -897,18 +958,22 @@ void ADS::cl_DenseStereo::ImgPerProcessing(vector<int> metod_ImagePerProcessing)
             // ============
 
             cv::Ptr <cv::CLAHE> clahe = cv::createCLAHE(40,cv::Size(8, 8));
+            clahe->setClipLimit(4);
 
             //  Разделяем изображение на 3 канала (B, G и R)
-            vector<Mat> bgr_planes;
+            vector<Mat> bgr_planes(3);
 
-
+            cv::Mat dst;
 
             // 01
             split( img01Remap_temp, bgr_planes );
             // Применяем выравнивание к гистограммам всех каналов
-            clahe->apply(bgr_planes[0], bgr_planes[0]);
-            clahe->apply(bgr_planes[1], bgr_planes[1]);
-            clahe->apply(bgr_planes[2], bgr_planes[2]);
+            clahe->apply(bgr_planes[0], dst); dst.copyTo(bgr_planes[0]);
+            clahe->apply(bgr_planes[1], dst); dst.copyTo(bgr_planes[1]);
+            clahe->apply(bgr_planes[2], dst); dst.copyTo(bgr_planes[2]);
+
+
+
             // Объединяем выровненные каналы в выровненное цветное изображение
             merge(bgr_planes, img01Remap_temp );
 
@@ -917,9 +982,9 @@ void ADS::cl_DenseStereo::ImgPerProcessing(vector<int> metod_ImagePerProcessing)
             // 02
             split( img02Remap_temp, bgr_planes );
             // Применяем выравнивание к гистограммам всех каналов
-            clahe->apply(bgr_planes[0], bgr_planes[0]);
-            clahe->apply(bgr_planes[1], bgr_planes[1]);
-            clahe->apply(bgr_planes[2], bgr_planes[2]);
+            clahe->apply(bgr_planes[0], dst); dst.copyTo(bgr_planes[0]);
+            clahe->apply(bgr_planes[1], dst); dst.copyTo(bgr_planes[1]);
+            clahe->apply(bgr_planes[2], dst); dst.copyTo(bgr_planes[2]);
             // Объединяем выровненные каналы в выровненное цветное изображение
             merge(bgr_planes, img02Remap_temp );
 
@@ -968,6 +1033,115 @@ void ADS::cl_DenseStereo::ImgPerProcessing(vector<int> metod_ImagePerProcessing)
 
             break;
         }
+
+
+
+
+        case 5:
+        {
+            if (!flag_gray)
+            {
+                // Convert the rectified images to grayscale images
+                cv::cvtColor(img01Remap_temp, gray01_temp,  cv::COLOR_BGR2GRAY);
+                cv::cvtColor(img02Remap_temp, gray02_temp,  cv::COLOR_BGR2GRAY);
+
+                flag_gray = true;
+            }
+            // ===========
+            // Фильтр повышения резкости
+            // ===========
+            // sharpen image using "unsharp mask" algorithm
+
+            //            Mat blurred; double sigma = 1, threshold = 5, amount = 1;
+            //            GaussianBlur(my_img, blurred, Size(), sigma, sigma);
+            //            Mat lowContrastMask = abs(my_img - blurred) < threshold;
+            //            Mat sharpened = my_img*(1+amount) + blurred*(-amount);
+            //            my_img.copyTo(sharpened, lowContrastMask);
+
+            break;
+        }
+
+
+        case 6:
+        {
+
+            // ===========
+            // CLAHE (через Color Lab) цветного изображения
+            // ============
+
+
+            cv::Ptr <cv::CLAHE> clahe = cv::createCLAHE(40,cv::Size(8, 8));
+            clahe->setClipLimit(4);
+            cv::Mat img_lab;
+            vector<Mat> lab_planes(3);
+
+            cv::Mat dst;
+
+            // 111
+
+            cvtColor(img01Remap_temp, img_lab, COLOR_BGR2Lab);
+
+            //img_lab.convertTo(img_lab, CV_16UC1);
+
+
+            //  Разделяем изображение на 3 канала (B, G и R)
+            split( img_lab, lab_planes );
+
+
+            // Применяем выравнивание к гистограммам всех каналов
+            clahe->apply(lab_planes[0], dst);
+            dst.copyTo(lab_planes[0]);
+
+            // Объединяем выровненные каналы в выровненное цветное изображение
+            merge(lab_planes, img_lab );
+
+           //img_lab.convertTo(img_lab, CV_8UC1);
+
+            cvtColor(img_lab, img01Remap_temp, COLOR_Lab2BGR);
+
+
+
+            // 222
+
+            cvtColor(img02Remap_temp, img_lab, COLOR_BGR2Lab);
+
+            //img_lab.convertTo(img_lab, CV_16UC1);
+
+            //  Разделяем изображение на 3 канала (B, G и R)
+            split( img_lab, lab_planes );
+
+
+            // Применяем выравнивание к гистограммам всех каналов
+            clahe->apply(lab_planes[0], dst);
+            dst.copyTo(lab_planes[0]);
+
+
+
+            // Объединяем выровненные каналы в выровненное цветное изображение
+            merge(lab_planes, img_lab );
+
+            // img_lab.convertTo(img_lab, CV_8UC1);
+
+            cvtColor(img_lab, img02Remap_temp, COLOR_Lab2BGR);
+
+
+
+
+
+
+            flag_gray = false;  // Если false  то будет проведено перевод в серое cv::cvtColor(img_temp, gray_temp,  cv::COLOR_BGR2GRAY);
+
+
+
+
+
+
+            break;
+        }
+
+
+
+
 
 
             // default:

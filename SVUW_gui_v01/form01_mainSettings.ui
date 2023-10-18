@@ -481,6 +481,11 @@
              <string>CLAHE + equalizeHist</string>
             </property>
            </item>
+           <item>
+            <property name="text">
+             <string>CLAHE (через Lab)</string>
+            </property>
+           </item>
           </widget>
          </item>
          <item row="19" column="0">

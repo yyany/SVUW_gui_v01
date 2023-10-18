@@ -5360,6 +5360,15 @@ release\moc_f02_ruler.cpp: f02_ruler.h \
 		C:\Qt\6.3.1\msvc2019_64\include\QtCore\QSizeF \
 		C:\Qt\6.3.1\msvc2019_64\include\QtGui\QTransform \
 		C:\Qt\6.3.1\msvc2019_64\include\QtCore\qnativeinterface.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QGraphicsView \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qgraphicsview.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtGui\qpainter.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtGui\qtextoption.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtGui\qpen.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qscrollarea.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qframe.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qgraphicsscene.h \
 		C:\Qt\6.3.1\msvc2019_64\include\QtCore\QTime \
 		C:\Qt\6.3.1\msvc2019_64\include\QtCore\qdatetime.h \
 		C:\Qt\6.3.1\msvc2019_64\include\QtCore\qcalendar.h \
@@ -6228,8 +6237,6 @@ release\moc_f02_ruler.cpp: f02_ruler.h \
 		C:\Qt\6.3.1\msvc2019_64\include\QtGui\qfontdatabase.h \
 		C:\Qt\6.3.1\msvc2019_64\include\QtGui\qtextcursor.h \
 		C:\Qt\6.3.1\msvc2019_64\include\QtGui\qtextformat.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtGui\qpen.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtGui\qtextoption.h \
 		C:\Qt\6.3.1\msvc2019_64\include\QtGui\qtextdocument.h \
 		C:\Qt\6.3.1\msvc2019_64\include\QtGui\qaccessible.h \
 		C:\Qt\6.3.1\msvc2019_64\include\QtGui\qaccessiblebridge.h \
@@ -6280,7 +6287,6 @@ release\moc_f02_ruler.cpp: f02_ruler.h \
 		C:\Qt\6.3.1\msvc2019_64\include\QtGui\QWindow \
 		C:\Qt\6.3.1\msvc2019_64\include\QtGui\QPaintDevice \
 		C:\Qt\6.3.1\msvc2019_64\include\QtGui\qpaintengine.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtGui\qpainter.h \
 		C:\Qt\6.3.1\msvc2019_64\include\QtGui\qpainterpath.h \
 		C:\Qt\6.3.1\msvc2019_64\include\QtGui\qpdfwriter.h \
 		C:\Qt\6.3.1\msvc2019_64\include\QtGui\qpicture.h \
@@ -6312,7 +6318,6 @@ release\moc_f02_ruler.cpp: f02_ruler.h \
 		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QGraphicsPixmapItem \
 		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qgraphicsitem.h \
 		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QGraphicsScene \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qgraphicsscene.h \
 		C:\Qt\6.3.1\msvc2019_64\include\QtCore\QPoint \
 		C:\Qt\6.3.1\msvc2019_64\include\QtCore\QFile \
 		C:\Qt\6.3.1\msvc2019_64\include\QtNetwork\QTcpServer \
@@ -9388,6 +9393,11 @@ release\moc_mainwindow.cpp: mainwindow.h \
 		cl_TCP_server.h \
 		cl_TCP_client.h \
 		f02_ruler.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QGraphicsView \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qgraphicsview.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qscrollarea.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qframe.h \
 		release\moc_predefs.h \
 		C:\Qt\6.3.1\msvc2019_64\bin\moc.exe
 	C:\Qt\6.3.1\msvc2019_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/User/Documents/Qt_Projects/_for_ddl/SVUW_gui_v01/SVUW_gui_v01/release/moc_predefs.h -IC:/Qt/6.3.1/msvc2019_64/mkspecs/win32-msvc -IC:/Users/User/Documents/Qt_Projects/_for_ddl/SVUW_gui_v01/SVUW_gui_v01 -IC:/libs/opencv/opencv-4.8.0-vc14_vc15/build/include -IC:/libs/armadillo/armadillo-9.850.1/include -IC:/libs/Pylon/Development/include -IC:/libs/Pylon/Development/include/pylon -IC:/libs/pyclustering/pyclustering-master/ccore/include -IC:/libs/HikRobotCam/Includes -IC:/Qt/6.3.1/msvc2019_64/include -IC:/Qt/6.3.1/msvc2019_64/include/QtMultimedia -IC:/Qt/6.3.1/msvc2019_64/include/QtDataVisualization -IC:/Qt/6.3.1/msvc2019_64/include/QtQuick -IC:/Qt/6.3.1/msvc2019_64/include/QtOpenGL -IC:/Qt/6.3.1/msvc2019_64/include/QtWidgets -IC:/Qt/6.3.1/msvc2019_64/include/QtGui -IC:/Qt/6.3.1/msvc2019_64/include/QtQmlModels -IC:/Qt/6.3.1/msvc2019_64/include/QtQml -IC:/Qt/6.3.1/msvc2019_64/include/QtNetwork -IC:/Qt/6.3.1/msvc2019_64/include/QtSerialPort -IC:/Qt/6.3.1/msvc2019_64/include/QtTest -IC:/Qt/6.3.1/msvc2019_64/include/QtQmlIntegration -IC:/Qt/6.3.1/msvc2019_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt" mainwindow.h -o release\moc_mainwindow.cpp
@@ -17422,6 +17432,15 @@ release\f02_ruler.obj: f02_ruler.cpp f02_ruler.h \
 		C:\Qt\6.3.1\msvc2019_64\include\QtCore\QSizeF \
 		C:\Qt\6.3.1\msvc2019_64\include\QtGui\QTransform \
 		C:\Qt\6.3.1\msvc2019_64\include\QtCore\qnativeinterface.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QGraphicsView \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qgraphicsview.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtGui\qpainter.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtGui\qtextoption.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtGui\qpen.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qscrollarea.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qframe.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qgraphicsscene.h \
 		C:\Qt\6.3.1\msvc2019_64\include\QtCore\QTime \
 		C:\Qt\6.3.1\msvc2019_64\include\QtCore\qdatetime.h \
 		C:\Qt\6.3.1\msvc2019_64\include\QtCore\qcalendar.h \
@@ -18290,8 +18309,6 @@ release\f02_ruler.obj: f02_ruler.cpp f02_ruler.h \
 		C:\Qt\6.3.1\msvc2019_64\include\QtGui\qfontdatabase.h \
 		C:\Qt\6.3.1\msvc2019_64\include\QtGui\qtextcursor.h \
 		C:\Qt\6.3.1\msvc2019_64\include\QtGui\qtextformat.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtGui\qpen.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtGui\qtextoption.h \
 		C:\Qt\6.3.1\msvc2019_64\include\QtGui\qtextdocument.h \
 		C:\Qt\6.3.1\msvc2019_64\include\QtGui\qaccessible.h \
 		C:\Qt\6.3.1\msvc2019_64\include\QtGui\qaccessiblebridge.h \
@@ -18342,7 +18359,6 @@ release\f02_ruler.obj: f02_ruler.cpp f02_ruler.h \
 		C:\Qt\6.3.1\msvc2019_64\include\QtGui\QWindow \
 		C:\Qt\6.3.1\msvc2019_64\include\QtGui\QPaintDevice \
 		C:\Qt\6.3.1\msvc2019_64\include\QtGui\qpaintengine.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtGui\qpainter.h \
 		C:\Qt\6.3.1\msvc2019_64\include\QtGui\qpainterpath.h \
 		C:\Qt\6.3.1\msvc2019_64\include\QtGui\qpdfwriter.h \
 		C:\Qt\6.3.1\msvc2019_64\include\QtGui\qpicture.h \
@@ -18374,7 +18390,6 @@ release\f02_ruler.obj: f02_ruler.cpp f02_ruler.h \
 		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QGraphicsPixmapItem \
 		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qgraphicsitem.h \
 		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QGraphicsScene \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qgraphicsscene.h \
 		C:\Qt\6.3.1\msvc2019_64\include\QtCore\QPoint \
 		C:\Qt\6.3.1\msvc2019_64\include\QtCore\QFile \
 		C:\Qt\6.3.1\msvc2019_64\include\QtNetwork\QTcpServer \
@@ -18670,34 +18685,7 @@ release\f02_ruler.obj: f02_ruler.cpp f02_ruler.h \
 		C:\Qt\6.3.1\msvc2019_64\include\QtDataVisualization\qscatterdataitem.h \
 		cl_TCP_server.h \
 		cl_TCP_client.h \
-		ui_f02_ruler.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QGraphicsView \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qgraphicsview.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qscrollarea.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qframe.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QGridLayout \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qgridlayout.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qlayout.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qlayoutitem.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qboxlayout.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QHeaderView \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qheaderview.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qabstractitemview.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qabstractitemdelegate.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qstyleoption.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qabstractspinbox.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qslider.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qabstractslider.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qstyle.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qtabbar.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qrubberband.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QPushButton \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qpushbutton.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qabstractbutton.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QTableWidget \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qtablewidget.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qtableview.h
+		ui_f02_ruler.h
 
 release\form01_mainSettings.obj: form01_mainSettings.cpp form01_mainSettings.h \
 		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QWidget \
@@ -20078,38 +20066,7 @@ release\form01_mainSettings.obj: form01_mainSettings.cpp form01_mainSettings.h \
 		C:\Qt\6.3.1\msvc2019_64\include\QtDataVisualization\qscatterdataitem.h \
 		cl_TCP_server.h \
 		cl_TCP_client.h \
-		ui_form01_mainSettings.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QCheckBox \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qcheckbox.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qabstractbutton.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QComboBox \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qcombobox.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qabstractitemdelegate.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qstyleoption.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qabstractspinbox.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qslider.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qabstractslider.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qstyle.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qtabbar.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qrubberband.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qframe.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QDoubleSpinBox \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qspinbox.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QGridLayout \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qgridlayout.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qlayout.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qlayoutitem.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qboxlayout.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QLabel \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qlabel.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QLineEdit \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qlineedit.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QRadioButton \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qradiobutton.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QSlider \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QSpacerItem \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QSpinBox \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QTabWidget
+		ui_form01_mainSettings.h
 
 release\main.obj: main.cpp mainwindow.h \
 		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QMainWindow \
@@ -21503,7 +21460,12 @@ release\main.obj: main.cpp mainwindow.h \
 		C:\Qt\6.3.1\msvc2019_64\include\QtDataVisualization\qscatterdataitem.h \
 		cl_TCP_server.h \
 		cl_TCP_client.h \
-		f02_ruler.h
+		f02_ruler.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QGraphicsView \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qgraphicsview.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qscrollarea.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qframe.h
 
 release\mainwindow.obj: mainwindow.cpp mainwindow.h \
 		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QMainWindow \
@@ -22898,71 +22860,12 @@ release\mainwindow.obj: mainwindow.cpp mainwindow.h \
 		cl_TCP_server.h \
 		cl_TCP_client.h \
 		f02_ruler.h \
-		ui_mainwindow.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtGui\QAction \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QCheckBox \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qcheckbox.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qabstractbutton.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QComboBox \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qcombobox.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qabstractitemdelegate.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qstyleoption.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qabstractspinbox.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qslider.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qabstractslider.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qstyle.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qtabbar.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qrubberband.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qframe.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QDoubleSpinBox \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qspinbox.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QFormLayout \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qformlayout.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QLayout \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qlayout.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qlayoutitem.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qboxlayout.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qgridlayout.h \
 		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QGraphicsView \
 		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qgraphicsview.h \
 		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qscrollarea.h \
 		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QGridLayout \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QHBoxLayout \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QHeaderView \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qheaderview.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qabstractitemview.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QLabel \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qlabel.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QLineEdit \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qlineedit.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QMenuBar \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qmenubar.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qmenu.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QPlainTextEdit \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qplaintextedit.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qtextedit.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QPushButton \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qpushbutton.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QRadioButton \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qradiobutton.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QSlider \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QSpacerItem \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QSpinBox \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QStatusBar \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qstatusbar.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QTabWidget \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QTableWidget \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qtablewidget.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qtableview.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QTextEdit \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QToolBar \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qtoolbar.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QVBoxLayout \
-		AnimatedSplitter.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QSplitter \
-		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qsplitter.h \
-		C:\Qt\6.3.1\msvc2019_64\include\QtCore\QEasingCurve
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qframe.h \
+		ui_mainwindow.h
 
 release\cl_DenseStereo.obj: cl_DenseStereo.cpp cl_DenseStereo.h \
 		cl_ImGrabBaslerCam.h \

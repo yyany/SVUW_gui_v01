@@ -1821,8 +1821,18 @@ void form01_mainSettings::on_comboBox_ImagePreProcessing_currentIndexChanged(int
         break;
 
     case 6:
-        // equalizeHist
-        settings_ptrf->metod_ImagePerProcessing[1] = 0;
+        // CLAHE (через Color Lab)
+        settings_ptrf->metod_ImagePerProcessing[1] = 6;
+        settings_ptrf->metod_ImagePerProcessing[2] = 0;
+        settings_ptrf->metod_ImagePerProcessing[3] = 0;
+        settings_ptrf->metod_ImagePerProcessing[4] = 0;
+        settings_ptrf->metod_ImagePerProcessing[5] = 0;
+
+        break;
+
+    case 7:
+        //
+        settings_ptrf->metod_ImagePerProcessing[1] = 5;
         settings_ptrf->metod_ImagePerProcessing[2] = 0;
         settings_ptrf->metod_ImagePerProcessing[3] = 0;
         settings_ptrf->metod_ImagePerProcessing[4] = 0;

@@ -429,11 +429,11 @@ public:
     /** Инициализация нейросети */
     errno_t init_network(const std::string model_path,
                          const std::string classes_path);
-    std::vector<float> get_confidences(void) { return confidences_set; }
-    std::vector<cv::Rect> get_boxes(void) { return boxes_set; }
-    std::vector<int> get_class_ids(void) { return classes_id_set; }
-    std::vector<std::string> get_classes(void) { return classes_set; }
-    float get_inference(void) { return inference_time; }
+    std::vector<float> get_confidences(void) { return confidences_set; } // вероятности
+    std::vector<cv::Rect> get_boxes(void) { return boxes_set; }     // рамки координаты
+    std::vector<int> get_class_ids(void) { return classes_id_set; } // индексы классов
+    std::vector<std::string> get_classes(void) { return classes_set; }  // имена классов
+    float get_inference(void) { return inference_time; }   // время обработки
     std::string get_info(void);
     cv::Mat process(cv::Mat &img);
     cv::Mat get_image(void);
