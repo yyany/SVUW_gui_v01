@@ -2648,9 +2648,9 @@ int Basler::cl_ImGrabBaslerCam::HRCam_SetCamSettings(unsigned int CamIndex)
 
 
 
-
+     // Отключил чтоб не мешало когда с ардуино сигнал
     // Set trigger mode as off
-    nRet = MV_CC_SetEnumValue(handle1__[CamIndex], "TriggerMode", 0);
+    // nRet = MV_CC_SetEnumValue(handle1__[CamIndex], "TriggerMode", 0);
 
 
     if (MV_OK != nRet)

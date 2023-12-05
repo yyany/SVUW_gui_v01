@@ -1741,42 +1741,52 @@ QComboBox:pressed {
               </item>
               <item>
                <property name="text">
-                <string>1 (0)   --- Параметры камеры по умолчанию из Config.xml</string>
+                <string>01 (0)   --- Параметры камеры по умолчанию из Config.xml</string>
                </property>
               </item>
               <item>
                <property name="text">
-                <string>2 (1) &gt;&gt;&gt; Basler :: acA1920-50gc :: 1920x1200 -&gt; 960x600</string>
+                <string>02 (1) &gt;&gt;&gt; Basler :: acA1920-50gc :: 1920x1200 -&gt; 960x600</string>
                </property>
               </item>
               <item>
                <property name="text">
-                <string>3 (1) &gt;&gt;&gt; Basler :: acA1920-50gc :: 1920x1200 -&gt; 1440x900</string>
+                <string>03 (1) &gt;&gt;&gt; Basler :: acA1920-50gc :: 1920x1200 -&gt; 1440x900</string>
                </property>
               </item>
               <item>
                <property name="text">
-                <string>4 (1) &gt;&gt;&gt; Basler :: acA1920-50gc :: 1920x1200 -&gt; 1920x1200</string>
+                <string>04 (1) &gt;&gt;&gt; Basler :: acA1920-50gc :: 1920x1200 -&gt; 1920x1200</string>
                </property>
               </item>
               <item>
                <property name="text">
-                <string>5 (2) +++ Basler :: acA1300-60gc :: 1280x1024  -&gt; 960x600 </string>
+                <string>05 (2) +++ Basler :: acA1300-60gc :: 1280x1024  -&gt; 960x600 </string>
                </property>
               </item>
               <item>
                <property name="text">
-                <string>6 (2) +++  Basler :: acA1300-60gc :: 1280x1024  -&gt; 1280x1024</string>
+                <string>06 (2) +++  Basler :: acA1300-60gc :: 1280x1024  -&gt; 1280x1024</string>
                </property>
               </item>
               <item>
                <property name="text">
-                <string>7 (3) ^^^ HikR :: MV-CA032-10GC :: 1280x1024  -&gt; 960x720</string>
+                <string>07 (3) ^^^ HikR :: MV-CA032-10GC :: 1280x1024  -&gt; 960x720</string>
                </property>
               </item>
               <item>
                <property name="text">
-                <string>8 (4) === IP Cam :: StereoPi :: 640x480 </string>
+                <string>08 (4) === IP Cam :: StereoPi :: 640x480 </string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>09 (5) ROV &gt;&gt;&gt; HikR :: MV-CB016-10GC-C :: 1440x1080  -&gt; 1440x1080</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>10 (5) ROV &gt;&gt;&gt; HikR :: MV-CB016-10GC-C :: 1440x1080  -&gt; 900x675</string>
                </property>
               </item>
              </widget>

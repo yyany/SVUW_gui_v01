@@ -5261,6 +5261,189 @@ cv::FileStorage fs;
         // >>>>>>>>>>>>>>>>>>>>
         break;
 
+
+
+
+
+    case 9:
+
+        // ======================
+        //  (5) ROV >>> HikR :: MV-CB016-10GC-C :: 1440x1080  -> 1440x1080
+        // ======================
+
+
+        // =============================
+        // Логотип на форму
+        // =============================
+        pix->load( ":/res_ImgLogo/files/Logo/Logo_ROV.png" );
+        w = ui->label_logo_WorkMode->width();
+        h = ui->label_logo_WorkMode->height();
+        ui->label_logo_CamTypy_2->setPixmap( pix->scaled(w, h, Qt::KeepAspectRatio));
+        // =============================
+
+
+
+        settings_ptr->CamSN = {"DA0007545",
+                               "DA0007551"}; // Серийные номера устройств (камер) HikRobot по 2-ому списку
+
+
+
+        // Параметры для обрезки изображений
+        settings_ptr->cam_CX = {1, 1};       // Центрирование изображения по горизонтали
+        settings_ptr->cam_CY = {1, 1};       // Центрирование изображения по вертикали
+        settings_ptr->cam_dX = {0, 0};       // Горизонтальный сдвиг активной области относительно левой стороны сенсора (в пикселях)
+        settings_ptr->cam_dY = {0, 0};       // Вертикальный сдвиг активной области относительно верхней части сенсора (в пикселях)
+        settings_ptr->cam_X = {1440, 1440};  // Ширина активной области (активной зоны) камеры в пикселях
+        settings_ptr->cam_Y = {1080, 1080};  // Высота активной области (активной зоны) камеры в пикселях.
+
+        // Параметры сжатия изображения
+
+        settings_ptr->img_X = 1440; // Ширина сжатого изображения
+        settings_ptr->img_Y = 1080; // Высота сжатого изображения
+
+        settings_ptr->img_coeff = 1;
+
+
+        // =====================================
+        //  Вывод серийных номеров и размера кадра на форму
+        // =====================================
+
+        ui->lineEdit_SNCam01->setText(QString::fromStdString(settings_ptr->CamSN.at(0)) );
+        ui->lineEdit_SNCam02->setText(QString::fromStdString(settings_ptr->CamSN.at(1)));
+        ui->lineEdit_FrameSize->setText(QString::number(settings_ptr->img_X) + "x" + QString::number(settings_ptr->img_Y));
+
+
+        // Заносим адреса камер в сторку на форме
+        ui->lineEdit_OpenFile1L->setText(QString::fromStdString(settings_ptr->CamSN.at(0)) );
+        ui->lineEdit_OpenFile2R->setText(QString::fromStdString(settings_ptr->CamSN.at(1)) );
+
+        // =============================
+        // Заносим адреса камер в сторку на форме
+        ui->lineEdit_OpenFile1L->setText(QString::fromUtf8( settings_ptr->CamSN[0].c_str() ));
+        ui->lineEdit_OpenFile2R->setText(QString::fromUtf8( settings_ptr->CamSN[1].c_str() ));
+
+        // Меняем названии на кнопки в сотвествии её изменённым назначением
+        ui->pushButton_OpenFile1L->setText("apply ID Cam01");
+        ui->pushButton_OpenFile2R->setText("apply ID Cam02");
+        // =============================
+
+
+        // ============================
+        // Загрузка нужной калибровки
+        // ============================
+        if (ui->checkBox_setWarterCalibr->isChecked() )
+        {
+            settings_ptr->CurrentCalib_filename = "./files/Calibration_Files/(98a)_(1440x1080p)_ROV_StereoModule(HikR_MV-CB016-10GC-C)_AIR.xml.xml";
+
+            obj_ptr->setCalibration(settings_ptr->CurrentCalib_filename );
+            ui->lineEdit_OpenCalibr->setText( settings_ptr->CurrentCalib_filename.c_str() );
+        }
+
+        else
+        {
+
+            settings_ptr->CurrentCalib_filename = "./files/Calibration_Files/(98a)_(1440x1080p)_ROV_StereoModule(HikR_MV-CB016-10GC-C)_AIR.xml" ;
+            obj_ptr->setCalibration(settings_ptr->CurrentCalib_filename );
+            ui->lineEdit_OpenCalibr->setText( settings_ptr->CurrentCalib_filename.c_str() );
+        }
+
+
+        // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+        emit signal_sendText_plainTextEdit_StateInfo( "    (5) ROV >>> HikR :: MV-CB016-10GC-C :: 1440x1080  -> 1440x1080  "); // отправка текста в информационное окно
+        // >>>>>>>>>>>>>>>>>>>>
+        break;
+
+
+    case 10:
+
+        // ======================
+        //  (5) ROV >>> HikR :: MV-CB016-10GC-C :: 1440x1080  -> 900x675
+        // ======================
+
+
+        // =============================
+        // Логотип на форму
+        // =============================
+        pix->load( ":/res_ImgLogo/files/Logo/Logo_ROV.png" );
+        w = ui->label_logo_WorkMode->width();
+        h = ui->label_logo_WorkMode->height();
+        ui->label_logo_CamTypy_2->setPixmap( pix->scaled(w, h, Qt::KeepAspectRatio));
+        // =============================
+
+
+
+        settings_ptr->CamSN = {"DA0007545",
+                               "DA0007551"}; // Серийные номера устройств (камер) HikRobot по 2-ому списку
+
+
+
+        // Параметры для обрезки изображений
+        settings_ptr->cam_CX = {1, 1};       // Центрирование изображения по горизонтали
+        settings_ptr->cam_CY = {1, 1};       // Центрирование изображения по вертикали
+        settings_ptr->cam_dX = {0, 0};       // Горизонтальный сдвиг активной области относительно левой стороны сенсора (в пикселях)
+        settings_ptr->cam_dY = {0, 0};       // Вертикальный сдвиг активной области относительно верхней части сенсора (в пикселях)
+        settings_ptr->cam_X = {1440, 1440};  // Ширина активной области (активной зоны) камеры в пикселях
+        settings_ptr->cam_Y = {1080, 1080};  // Высота активной области (активной зоны) камеры в пикселях.
+
+        // Параметры сжатия изображения
+
+        settings_ptr->img_X = 900; // Ширина сжатого изображения
+        settings_ptr->img_Y = 675; // Высота сжатого изображения
+
+        settings_ptr->img_coeff = 1;
+
+
+        // =====================================
+        //  Вывод серийных номеров и размера кадра на форму
+        // =====================================
+
+        ui->lineEdit_SNCam01->setText(QString::fromStdString(settings_ptr->CamSN.at(0)) );
+        ui->lineEdit_SNCam02->setText(QString::fromStdString(settings_ptr->CamSN.at(1)));
+        ui->lineEdit_FrameSize->setText(QString::number(settings_ptr->img_X) + "x" + QString::number(settings_ptr->img_Y));
+
+
+        // Заносим адреса камер в сторку на форме
+        ui->lineEdit_OpenFile1L->setText(QString::fromStdString(settings_ptr->CamSN.at(0)) );
+        ui->lineEdit_OpenFile2R->setText(QString::fromStdString(settings_ptr->CamSN.at(1)) );
+
+        // =============================
+        // Заносим адреса камер в сторку на форме
+        ui->lineEdit_OpenFile1L->setText(QString::fromUtf8( settings_ptr->CamSN[0].c_str() ));
+        ui->lineEdit_OpenFile2R->setText(QString::fromUtf8( settings_ptr->CamSN[1].c_str() ));
+
+        // Меняем названии на кнопки в сотвествии её изменённым назначением
+        ui->pushButton_OpenFile1L->setText("apply ID Cam01");
+        ui->pushButton_OpenFile2R->setText("apply ID Cam02");
+        // =============================
+
+
+        // ============================
+        // Загрузка нужной калибровки
+        // ============================
+        if (ui->checkBox_setWarterCalibr->isChecked() )
+        {
+            settings_ptr->CurrentCalib_filename = "./files/Calibration_Files/(99a)_(900x675p)_ROV_StereoModule(HikR_MV-CB016-10GC-C)_AIR.xml";
+
+            obj_ptr->setCalibration(settings_ptr->CurrentCalib_filename );
+            ui->lineEdit_OpenCalibr->setText( settings_ptr->CurrentCalib_filename.c_str() );
+        }
+
+        else
+        {
+
+            settings_ptr->CurrentCalib_filename = "./files/Calibration_Files/(99a)_(900x675p)_ROV_StereoModule(HikR_MV-CB016-10GC-C)_AIR.xml" ;
+            obj_ptr->setCalibration(settings_ptr->CurrentCalib_filename );
+            ui->lineEdit_OpenCalibr->setText( settings_ptr->CurrentCalib_filename.c_str() );
+        }
+
+
+        // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+        emit signal_sendText_plainTextEdit_StateInfo( "    (5) ROV >>> HikR :: MV-CB016-10GC-C :: 1440x1080  -> 900x675  "); // отправка текста в информационное окно
+        // >>>>>>>>>>>>>>>>>>>>
+        break;
+
+
+
 default:
 
 

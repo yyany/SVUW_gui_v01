@@ -1088,6 +1088,8 @@ public:
         comboBox_CamType->addItem(QString());
         comboBox_CamType->addItem(QString());
         comboBox_CamType->addItem(QString());
+        comboBox_CamType->addItem(QString());
+        comboBox_CamType->addItem(QString());
         comboBox_CamType->setObjectName(QString::fromUtf8("comboBox_CamType"));
         comboBox_CamType->setMaximumSize(QSize(16777215, 25));
         comboBox_CamType->setFont(font7);
@@ -2334,14 +2336,16 @@ public:
         comboBoxMain_SelectCam->setItemText(8, QCoreApplication::translate("MainWindow", "8 \320\241\321\202\320\265\321\200\320\265\320\276 \320\272\320\260\320\274\320\265\321\200\320\260 Basler (by IP address)", nullptr));
 
         comboBox_CamType->setItemText(0, QCoreApplication::translate("MainWindow", "0 (-1) --- \320\237\321\200\320\276\320\270\320\267\320\262\320\276\320\273\321\214\320\275\320\260\321\217 \320\272\320\260\320\274\320\265\321\200\320\260 (\321\200\320\260\320\267\320\274\320\265\321\200 \320\272\320\260\320\264\321\200\320\260 \320\275\320\265 \320\274\320\265\320\275\321\217\320\265\321\202\321\201\321\217)", nullptr));
-        comboBox_CamType->setItemText(1, QCoreApplication::translate("MainWindow", "1 (0)   --- \320\237\320\260\321\200\320\260\320\274\320\265\321\202\321\200\321\213 \320\272\320\260\320\274\320\265\321\200\321\213 \320\277\320\276 \321\203\320\274\320\276\320\273\321\207\320\260\320\275\320\270\321\216 \320\270\320\267 Config.xml", nullptr));
-        comboBox_CamType->setItemText(2, QCoreApplication::translate("MainWindow", "2 (1) >>> Basler :: acA1920-50gc :: 1920x1200 -> 960x600", nullptr));
-        comboBox_CamType->setItemText(3, QCoreApplication::translate("MainWindow", "3 (1) >>> Basler :: acA1920-50gc :: 1920x1200 -> 1440x900", nullptr));
-        comboBox_CamType->setItemText(4, QCoreApplication::translate("MainWindow", "4 (1) >>> Basler :: acA1920-50gc :: 1920x1200 -> 1920x1200", nullptr));
-        comboBox_CamType->setItemText(5, QCoreApplication::translate("MainWindow", "5 (2) +++ Basler :: acA1300-60gc :: 1280x1024  -> 960x600 ", nullptr));
-        comboBox_CamType->setItemText(6, QCoreApplication::translate("MainWindow", "6 (2) +++  Basler :: acA1300-60gc :: 1280x1024  -> 1280x1024", nullptr));
-        comboBox_CamType->setItemText(7, QCoreApplication::translate("MainWindow", "7 (3) ^^^ HikR :: MV-CA032-10GC :: 1280x1024  -> 960x720", nullptr));
-        comboBox_CamType->setItemText(8, QCoreApplication::translate("MainWindow", "8 (4) === IP Cam :: StereoPi :: 640x480 ", nullptr));
+        comboBox_CamType->setItemText(1, QCoreApplication::translate("MainWindow", "01 (0)   --- \320\237\320\260\321\200\320\260\320\274\320\265\321\202\321\200\321\213 \320\272\320\260\320\274\320\265\321\200\321\213 \320\277\320\276 \321\203\320\274\320\276\320\273\321\207\320\260\320\275\320\270\321\216 \320\270\320\267 Config.xml", nullptr));
+        comboBox_CamType->setItemText(2, QCoreApplication::translate("MainWindow", "02 (1) >>> Basler :: acA1920-50gc :: 1920x1200 -> 960x600", nullptr));
+        comboBox_CamType->setItemText(3, QCoreApplication::translate("MainWindow", "03 (1) >>> Basler :: acA1920-50gc :: 1920x1200 -> 1440x900", nullptr));
+        comboBox_CamType->setItemText(4, QCoreApplication::translate("MainWindow", "04 (1) >>> Basler :: acA1920-50gc :: 1920x1200 -> 1920x1200", nullptr));
+        comboBox_CamType->setItemText(5, QCoreApplication::translate("MainWindow", "05 (2) +++ Basler :: acA1300-60gc :: 1280x1024  -> 960x600 ", nullptr));
+        comboBox_CamType->setItemText(6, QCoreApplication::translate("MainWindow", "06 (2) +++  Basler :: acA1300-60gc :: 1280x1024  -> 1280x1024", nullptr));
+        comboBox_CamType->setItemText(7, QCoreApplication::translate("MainWindow", "07 (3) ^^^ HikR :: MV-CA032-10GC :: 1280x1024  -> 960x720", nullptr));
+        comboBox_CamType->setItemText(8, QCoreApplication::translate("MainWindow", "08 (4) === IP Cam :: StereoPi :: 640x480 ", nullptr));
+        comboBox_CamType->setItemText(9, QCoreApplication::translate("MainWindow", "09 (5) ROV >>> HikR :: MV-CB016-10GC-C :: 1440x1080  -> 1440x1080", nullptr));
+        comboBox_CamType->setItemText(10, QCoreApplication::translate("MainWindow", "10 (5) ROV >>> HikR :: MV-CB016-10GC-C :: 1440x1080  -> 900x675", nullptr));
 
         comboBox_CamType->setCurrentText(QCoreApplication::translate("MainWindow", "0 (-1) --- \320\237\321\200\320\276\320\270\320\267\320\262\320\276\320\273\321\214\320\275\320\260\321\217 \320\272\320\260\320\274\320\265\321\200\320\260 (\321\200\320\260\320\267\320\274\320\265\321\200 \320\272\320\260\320\264\321\200\320\260 \320\275\320\265 \320\274\320\265\320\275\321\217\320\265\321\202\321\201\321\217)", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "\320\243\320\277\321\200\320\260\320\262\320\273\320\265\320\275\320\270\320\265 \320\277\320\276\321\202\320\276\320\272\320\260\320\274\320\270", nullptr));

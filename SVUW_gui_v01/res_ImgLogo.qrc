@@ -15,5 +15,6 @@
         <file>files/Logo/ip-camera.png</file>
         <file>files/Logo/image.png</file>
         <file>files/Logo/RTK2.jpg</file>
+        <file>files/Logo/Logo_ROV.png</file>
     </qresource>
 </RCC>

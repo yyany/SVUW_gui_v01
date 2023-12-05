@@ -300,7 +300,8 @@ release\qrc_res_ImgLogo.cpp: res_ImgLogo.qrc \
 		files\Logo\basler_logo.jpg \
 		files\Logo\logo5_100.png \
 		files\Logo\logoAurora02_100.jpg \
-		files\Logo\IP.jpg
+		files\Logo\IP.jpg \
+		files\Logo\Logo_ROV.png
 	C:\Qt\6.3.1\msvc2019_64\bin\rcc.exe -name res_ImgLogo res_ImgLogo.qrc -o release\qrc_res_ImgLogo.cpp
 
 release\qrc_res_QTFormApp_3DRuler.cpp: res_QTFormApp_3DRuler.qrc \
@@ -18685,7 +18686,29 @@ release\f02_ruler.obj: f02_ruler.cpp f02_ruler.h \
 		C:\Qt\6.3.1\msvc2019_64\include\QtDataVisualization\qscatterdataitem.h \
 		cl_TCP_server.h \
 		cl_TCP_client.h \
-		ui_f02_ruler.h
+		ui_f02_ruler.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QGridLayout \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qlayout.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QHeaderView \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qheaderview.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qabstractitemview.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qabstractitemdelegate.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qstyleoption.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qabstractspinbox.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qslider.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qabstractslider.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qstyle.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qtabbar.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qrubberband.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QPushButton \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qpushbutton.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QTableWidget \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qtablewidget.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qtableview.h
 
 release\form01_mainSettings.obj: form01_mainSettings.cpp form01_mainSettings.h \
 		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QWidget \
@@ -20066,7 +20089,38 @@ release\form01_mainSettings.obj: form01_mainSettings.cpp form01_mainSettings.h \
 		C:\Qt\6.3.1\msvc2019_64\include\QtDataVisualization\qscatterdataitem.h \
 		cl_TCP_server.h \
 		cl_TCP_client.h \
-		ui_form01_mainSettings.h
+		ui_form01_mainSettings.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QCheckBox \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qcheckbox.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QComboBox \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qcombobox.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qabstractitemdelegate.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qstyleoption.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qabstractspinbox.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qslider.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qabstractslider.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qstyle.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qtabbar.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qrubberband.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qframe.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QDoubleSpinBox \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qspinbox.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QGridLayout \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qlayout.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QLabel \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qlabel.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QLineEdit \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qlineedit.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QRadioButton \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qradiobutton.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QSlider \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QSpacerItem \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QSpinBox \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QTabWidget
 
 release\main.obj: main.cpp mainwindow.h \
 		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QMainWindow \
@@ -22865,7 +22919,66 @@ release\mainwindow.obj: mainwindow.cpp mainwindow.h \
 		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qscrollarea.h \
 		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qabstractscrollarea.h \
 		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qframe.h \
-		ui_mainwindow.h
+		ui_mainwindow.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtGui\QAction \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QCheckBox \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qcheckbox.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QComboBox \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qcombobox.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qabstractitemdelegate.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qstyleoption.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qabstractspinbox.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qslider.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qabstractslider.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qstyle.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qtabbar.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qrubberband.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QDoubleSpinBox \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qspinbox.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QFormLayout \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qformlayout.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QLayout \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qlayout.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QGridLayout \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QHBoxLayout \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QHeaderView \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qheaderview.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qabstractitemview.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QLabel \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qlabel.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QLineEdit \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qlineedit.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QMenuBar \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qmenubar.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qmenu.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QPlainTextEdit \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qplaintextedit.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QPushButton \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qpushbutton.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QRadioButton \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qradiobutton.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QSlider \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QSpacerItem \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QSpinBox \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QStatusBar \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qstatusbar.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QTabWidget \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QTableWidget \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qtablewidget.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qtableview.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QTextEdit \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QToolBar \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qtoolbar.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QVBoxLayout \
+		AnimatedSplitter.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\QSplitter \
+		C:\Qt\6.3.1\msvc2019_64\include\QtWidgets\qsplitter.h \
+		C:\Qt\6.3.1\msvc2019_64\include\QtCore\QEasingCurve
 
 release\cl_DenseStereo.obj: cl_DenseStereo.cpp cl_DenseStereo.h \
 		cl_ImGrabBaslerCam.h \
