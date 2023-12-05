@@ -167,6 +167,9 @@ MainWindow::MainWindow(QWidget *parent)
     const std::string classes_path = settings_ptr->DarkNet.classes_path;
     ADS::NeuralNetDetector * detector = new ADS::NeuralNetDetector(model_path, classes_path, 640, 640);
 
+    const std::string smodel_path = settings_ptr->DarkNetSeg.model_path;
+    const std::string sclasses_path = settings_ptr->DarkNetSeg.classes_path;
+    ADS::NeuralNetSegmentator * segmentator = new ADS::NeuralNetSegmentator(smodel_path, sclasses_path, 640, 640);
 
 
     // =================================
@@ -176,6 +179,7 @@ MainWindow::MainWindow(QWidget *parent)
     settings_ptr->Objs_ptr.vuxyzrgb_copy = vuxyzrgb_copy;
     settings_ptr->Objs_ptr.objp_VideoStreamer = objp_VideoStreamer;
     settings_ptr->Objs_ptr.DarkNetDetector = detector;
+    settings_ptr->Objs_ptr.DarkNetSegmentator = segmentator;
 
 
     //    settings_ptr->Objs_ptr.objTcpServer_ptr = objTcpServer_ptr;

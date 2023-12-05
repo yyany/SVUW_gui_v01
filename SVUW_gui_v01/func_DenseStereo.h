@@ -449,6 +449,92 @@ public:
 
 
 
+/** Параметры обработки */
+const int INPUT_WIDTH = 640;
+const int INPUT_HEIGHT = 640;
+
+/** Структура сегмента */
+struct OutputSeg {
+    int id;             // идентификатор класса
+    float confidence;   // вероятность
+    cv::Rect box;       // рамка сегмента
+    cv::Mat boxMask;    // маска сегмента
+};
+
+/** Структура параметров маски */
+struct MaskParams {
+    int segChannels = 32;
+    int segWidth = 160;
+    int segHeight = 160;
+    int netWidth = INPUT_WIDTH;
+    int netHeight = INPUT_HEIGHT;
+    float maskThreshold = 0.5;
+    cv::Size srcImgShape;
+    cv::Vec4d params;
+};
+
+/** Класс сегментатора */
+class NeuralNetSegmentator {
+private:
+    /** Структура нейросети */
+    cv::dnn::Net network;
+    /** Ширина и высота входного изображения */
+    int input_width = 640;
+    int input_height = 640;
+    /** Вектор распознаваемых классов */
+    std::vector<std::string> classes;
+    /** Структуры для хранения результатов обработки */
+    std::vector<int> classes_id_set;
+    std::vector<cv::Rect> boxes_set;
+    std::vector<float> confidences_set;
+    std::vector<std::string> classes_set;
+    std::vector<cv::Scalar> masks_colors_set;
+    std::vector<cv::Mat> masks_set;
+    cv::Mat processed_image;
+    /** Время обработки */
+    float inference_time;
+    /** Получить строковые значения классов */
+    int read_classes(const std::string file_path);
+    /** Инициализация нейросети */
+    int init_network(const std::string model_path,
+                         const std::string classes_path);
+    /** TODO */
+    void letter_box(const cv::Mat& image, cv::Mat& outImage,
+                    cv::Vec4d& params,
+                    const cv::Size& newShape,
+                    bool autoShape, bool scaleFill,
+                    bool scaleUp, int stride);
+    /** Отрисовка метки */
+    void draw_label(cv::Mat& img, std::string label, int left, int top);
+    /** TODO */
+    void draw_result(cv::Mat& image, std::vector<OutputSeg> result,
+                     std::vector<std::string> class_name);
+    /** Предобработка результатов */
+    std::vector<cv::Mat> pre_process(cv::Mat& img, cv::Vec4d& params);
+    /** TODO */
+    void get_mask(const cv::Mat& mask_proposals, const cv::Mat& mask_protos,
+                  OutputSeg& output, const MaskParams& maskParams);
+    /** Постобработка результатов */
+    cv::Mat post_process(cv::Mat &img, std::vector<cv::Mat> &outputs,
+                         const std::vector<std::string> &class_name,
+                         cv::Vec4d& params);
+public:
+    NeuralNetSegmentator(const std::string model, const std::string classes,
+                         int width, int height);
+    std::vector<float> get_confidences(void) { return confidences_set; }
+    std::vector<cv::Rect> get_boxes(void) { return boxes_set; }
+    std::vector<int> get_class_ids(void) { return classes_id_set; }
+    std::vector<std::string> get_classes(void) { return classes_set; }
+    std::vector<cv::Mat> get_masks(void) { return masks_set; }
+    cv::Mat get_image(void) { return processed_image; }
+    float get_inference(void) { return inference_time; }
+    std::string get_info(void);
+    cv::Mat process(cv::Mat &img);
+};
+
+
+
+
 
 }
 

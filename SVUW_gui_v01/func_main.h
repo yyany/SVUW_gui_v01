@@ -41,8 +41,7 @@ struct Objs_ptr     // Для хранения ссылок на объекты 
     TCPClient* objTcpClient_ptr;
     cl_VideoStreamer* objp_VideoStreamer;  // ссылка на объект класса для видео стрима
     ADS::NeuralNetDetector * DarkNetDetector;   // ссылка на нейронной сети для распознания объектов на изображении
-
-
+    ADS::NeuralNetSegmentator * DarkNetSegmentator;   // ссылка на нейронной сети для распознания объектов на изображении
 };
 
 // =============================================
@@ -194,6 +193,15 @@ struct DarkNet    // DarkNet
 
 };
 
+struct DarkNetSeg    // DarkNet
+{
+
+    bool reply = false;
+    std::string replyAll = "-";
+    std::string model_path = "./files/nn/yolov5n-seg.onnx";
+    std::string classes_path = "./files/nn/coco.names";
+
+};
 
 struct MissActions    //
 {
@@ -225,6 +233,8 @@ struct str_Settings     // Структура в формате std:vector
     struct VideoStreamer VideoStreamer;  // HikRobot (HikVision)
 
     struct DarkNet DarkNet;  // Кирилл - нейронная сеть
+
+    struct DarkNetSeg DarkNetSeg;  // Кирилл - нейронная сеть
 
     struct  MissActions MissActions;  // всплывающие окна
 

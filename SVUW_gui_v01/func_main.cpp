@@ -240,7 +240,7 @@ void threadFuncCommon(ADS::cl_DenseStereo& obj,
 
      ADS::NeuralNetDetector * detector = settings.Objs_ptr.DarkNetDetector;
 
-
+     ADS::NeuralNetSegmentator * segmentator = settings.Objs_ptr.DarkNetSegmentator;
 
     cout << "Thread0"<< q_thread << ": Begin  \n";
 
@@ -1002,14 +1002,21 @@ void threadFuncCommon(ADS::cl_DenseStereo& obj,
                 std::cout << "===>>> imread = " << Img_temp.empty() << std::endl;
 
 
-
+#if 0 // TODO выбор детектора в конфиге
                 detector->process( Img_temp);
                 cv::Mat replyImg = detector->get_image();
 
                 std::string info = detector->get_info();
 
                 settings.DarkNet.replyAll = info;
+#else
+                segmentator->process( Img_temp);
+                cv::Mat replyImg = segmentator->get_image();
 
+                std::string info = segmentator->get_info();
+
+                settings.DarkNetSeg.replyAll = info;
+#endif
                 //for (size_t i = 0; i < info.size(); i++) std::cout << info[i];
 
 
@@ -1020,10 +1027,10 @@ void threadFuncCommon(ADS::cl_DenseStereo& obj,
 //                //=========================================
 
 
-//                // Запуст окна для вывода результатов
-//                // cv::namedWindow("Window_img", cv::WINDOW_AUTOSIZE); // Создаем  окна
-//                cv::imshow("Window_img", replyImg);
-//                cv::waitKey(10);
+                // Запуст окна для вывода результатов
+                // cv::namedWindow("Window_img", cv::WINDOW_AUTOSIZE); // Создаем  окна
+                //cv::imshow("Window_img", replyImg);
+                //cv::waitKey(10);
 
 
 
@@ -1585,7 +1592,8 @@ cv::Mat  getImg02(ADS::cl_DenseStereo* obj_ptr, str_Settings *settings_ptr, int 
             break;
 
         case 70:
-            m = settings_ptr->Objs_ptr.DarkNetDetector->get_image();
+            // TODO Добавить окошко или подумать m = settings_ptr->Objs_ptr.DarkNetDetector->get_image();
+            m = settings_ptr->Objs_ptr.DarkNetSegmentator->get_image();
             break;
 
 
@@ -3543,7 +3551,8 @@ void  InitializeSettings(str_Settings* settings_ptr)
         fs["DarkNet_model_path"] >> settings_ptr->DarkNet.model_path;
         fs["DarkNet_classes_path"] >> settings_ptr->DarkNet.classes_path;
 
-
+        fs["DarkNet_model_path"] >> settings_ptr->DarkNetSeg.model_path;
+        fs["DarkNet_classes_path"] >> settings_ptr->DarkNetSeg.classes_path;
 
 
 

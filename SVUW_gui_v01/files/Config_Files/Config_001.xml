@@ -85,7 +85,7 @@
 <AuroraLantern_SerialPort_COMport>"COM3"</AuroraLantern_SerialPort_COMport>
 <CamSN>
   "02K37741088" "02K37741018"</CamSN>
-<DarkNet_model_path>"./files/nn/yolov5.onnx"</DarkNet_model_path>
+<DarkNet_model_path>"./files/nn/yolov5n-seg.onnx"</DarkNet_model_path>
 <DarkNet_classes_path>"./files/nn/yolov5.names"</DarkNet_classes_path>
 </opencv_storage>
  
